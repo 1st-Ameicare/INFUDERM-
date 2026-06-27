@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | INFUDERM</title><meta name="description" content="INFUDERM Clinic in Reston, VA offers medical aesthetics, wellness, skin treatments, in-home IV therapy, and consultations.">
+<link rel="stylesheet" href="../style.css">
+  <style>
+    /* Contact page redesign */
+    .redesigned-contact-card {
+      padding: clamp(28px, 3vw, 42px) !important;
+    }
+
+    .redesigned-contact-card h2 {
+      margin-bottom: 10px !important;
+      line-height: 1.08 !important;
+    }
+
+    .redesigned-contact-card .contact-intro {
+      max-width: 560px;
+      margin-bottom: 28px !important;
+      line-height: 1.75;
+    }
+
+    .redesigned-contact-card .contact-card-section {
+      padding-top: 24px;
+      margin-top: 24px;
+      border-top: 1px solid rgba(212,175,90,.22);
+    }
+
+    .redesigned-contact-card .contact-section-heading {
+      color: #f0d990;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 800;
+      font-size: .72rem;
+      margin-bottom: 16px;
+    }
+
+    .redesigned-contact-card .contact-method-grid,
+    .redesigned-contact-card .location-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .redesigned-contact-card .contact-method-card,
+    .redesigned-contact-card .location-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      border: 1px solid rgba(212,175,90,.18);
+      border-radius: 16px;
+      background: rgba(255,255,255,.025);
+      text-decoration: none;
+      min-width: 0;
+    }
+
+    .redesigned-contact-card .contact-method-card:hover {
+      border-color: rgba(240,217,144,.45);
+      transform: translateY(-2px);
+      transition: .2s ease;
+    }
+
+    .redesigned-contact-card .contact-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212,175,90,.45);
+      color: #f0d990;
+      font-size: .95rem;
+    }
+
+    .redesigned-contact-card strong {
+      display: block;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+
+    .redesigned-contact-card small,
+    .redesigned-contact-card .location-card span {
+      display: block;
+      color: rgba(245,240,232,.82);
+      font-size: .92rem;
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    .redesigned-contact-card .hours-box {
+      border: 1px solid rgba(212,175,90,.18);
+      border-radius: 16px;
+      background: rgba(255,255,255,.025);
+      padding: 18px 20px;
+    }
+
+    .redesigned-contact-card .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(212,175,90,.16);
+    }
+
+    .redesigned-contact-card .hours-row:first-child {
+      padding-top: 0;
+    }
+
+    .redesigned-contact-card .hours-row span {
+      color: rgba(245,240,232,.78);
+    }
+
+    .redesigned-contact-card .hours-row strong {
+      margin-bottom: 0;
+      text-align: right;
+    }
+
+    .redesigned-contact-card .hours-box p {
+      margin-top: 14px !important;
+      margin-bottom: 0 !important;
+      color: rgba(245,240,232,.72);
+      font-style: italic;
+      line-height: 1.65;
+    }
+
+    .redesigned-contact-card .location-card {
+      display: block;
+    }
+
+    
+    .contact-card.redesigned-contact-card .contact-method-card small {
+      white-space: nowrap;
+      font-size: clamp(.82rem, 1.3vw, .92rem);
+    }
+
+@media (max-width: 900px) {
+      .redesigned-contact-card .contact-method-grid,
+      .redesigned-contact-card .location-card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .redesigned-contact-card .hours-row {
+        display: block;
+      }
+
+      .redesigned-contact-card .hours-row strong {
+        text-align: left;
+        margin-top: 4px;
+      }
+    }
+  </style>
+
+
+  <style>
+    /* Contact page redesign v2 */
+    .contact-card.redesigned-contact-card {
+      padding: clamp(28px, 3vw, 42px) !important;
+    }
+    .contact-card.redesigned-contact-card .contact-title {
+      margin-bottom: 10px !important;
+      line-height: 1.08 !important;
+    }
+    .contact-card.redesigned-contact-card .contact-intro {
+      max-width: 560px;
+      margin-bottom: 28px !important;
+      line-height: 1.75;
+    }
+    .contact-card.redesigned-contact-card .contact-card-section {
+      padding-top: 24px;
+      margin-top: 24px;
+      border-top: 1px solid rgba(212,175,90,.22);
+    }
+    .contact-card.redesigned-contact-card .contact-section-heading {
+      color: #f0d990;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font-weight: 800;
+      font-size: .72rem;
+      margin-bottom: 16px;
+    }
+    .contact-card.redesigned-contact-card .contact-method-grid,
+    .contact-card.redesigned-contact-card .location-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .contact-card.redesigned-contact-card .contact-method-card,
+    .contact-card.redesigned-contact-card .location-card {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px;
+      border: 1px solid rgba(212,175,90,.18);
+      border-radius: 16px;
+      background: rgba(255,255,255,.025);
+      text-decoration: none;
+      min-width: 0;
+    }
+    .contact-card.redesigned-contact-card .contact-method-card:hover {
+      border-color: rgba(240,217,144,.45);
+      transform: translateY(-2px);
+      transition: .2s ease;
+    }
+    .contact-card.redesigned-contact-card .contact-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212,175,90,.45);
+      color: #f0d990;
+      font-size: .95rem;
+    }
+    .contact-card.redesigned-contact-card strong {
+      display: block;
+      color: #fff;
+      line-height: 1.35;
+      margin-bottom: 5px;
+    }
+    .contact-card.redesigned-contact-card small,
+    .contact-card.redesigned-contact-card .location-card span {
+      display: block;
+      color: rgba(245,240,232,.82);
+      font-size: .92rem;
+      line-height: 1.55;
+      word-break: break-word;
+    }
+    .contact-card.redesigned-contact-card .hours-box {
+      border: 1px solid rgba(212,175,90,.18);
+      border-radius: 16px;
+      background: rgba(255,255,255,.025);
+      padding: 18px 20px;
+    }
+    .contact-card.redesigned-contact-card .hours-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(212,175,90,.16);
+    }
+    .contact-card.redesigned-contact-card .hours-row:first-child { padding-top: 0; }
+    .contact-card.redesigned-contact-card .hours-row span { color: rgba(245,240,232,.78); }
+    .contact-card.redesigned-contact-card .hours-row strong {
+      margin-bottom: 0;
+      text-align: right;
+    }
+    .contact-card.redesigned-contact-card .hours-box p {
+      margin-top: 14px !important;
+      margin-bottom: 0 !important;
+      color: rgba(245,240,232,.72);
+      font-style: italic;
+      line-height: 1.65;
+    }
+    .contact-card.redesigned-contact-card .location-card { display: block; }
+    
+    .contact-card.redesigned-contact-card .contact-method-card small {
+      white-space: nowrap;
+      font-size: clamp(.82rem, 1.3vw, .92rem);
+    }
+
+@media (max-width: 900px) {
+      .contact-card.redesigned-contact-card .contact-method-grid,
+      .contact-card.redesigned-contact-card .location-card-grid { grid-template-columns: 1fr; }
+      .contact-card.redesigned-contact-card .hours-row { display: block; }
+      .contact-card.redesigned-contact-card .hours-row strong {
+        text-align: left;
+        margin-top: 4px;
+      }
+    }
+  </style>
+
+<style>
+/* Equal-size contact maps */
+.location-card iframe,.contact-location-card iframe,.office-card iframe,.locations-grid iframe{width:100%!important;height:360px!important;max-width:100%!important;border:0!important;border-radius:18px!important;display:block!important;margin-top:16px!important}
+.location-card,.contact-location-card,.office-card{overflow:hidden!important}
+@media(max-width:760px){.location-card iframe,.contact-location-card iframe,.office-card iframe,.locations-grid iframe{height:300px!important}}
+</style>
+</head><body><div class="top-bar">Now welcoming new aesthetics and wellness patients in Reston & Aldie, VA</div>
+<header><nav class="nav">
+<a href="../"><img class="logo" src="../logo.png" alt="INFUDERM Logo"></a>
+<div class="nav-links">
+<a href="../about/">About</a><a href="../services/">Price & Treatment</a><a href="../team/">Meet Our Team</a><a href="../contact/">Contact Us</a>
+</div>
+<a class="btn" href="../contact/#consultation-form">Book Free Consultation</a>
+</nav></header><main>
+<section id="consultation-form"><div class="container contact-grid">
+<div class="contact-card redesigned-contact-card">
+  <div class="eyebrow">Contact Us</div>
+  <h1 class="contact-title">INFUDERM Clinic</h1>
+  <p class="contact-intro">Reach out to request an appointment, ask about services, or schedule your free consultation.</p>
+
+  <div class="contact-card-section">
+    <div class="contact-section-heading">Contact Methods</div>
+    <div class="contact-method-grid">
+      <a class="contact-method-card" href="mailto:Info@InfudermVA.com">
+        <span class="contact-icon">✉</span>
+        <span><strong>Email</strong><small>Info@InfudermVA.com</small></span>
+      </a>
+      <a class="contact-method-card" href="tel:+15713759180">
+        <span class="contact-icon">☎</span>
+        <span><strong>Phone</strong><small>(571) 375-9180</small></span>
+      </a>
+      <div class="contact-method-card">
+        <span class="contact-icon">▣</span>
+        <span><strong>Fax</strong><small>571-639-4695</small></span>
+      </div>
+      <a class="contact-method-card" href="https://www.instagram.com/infudermclinic/" target="_blank" rel="noopener">
+        <span class="contact-icon">◎</span>
+        <span><strong>Instagram</strong><small>@infudermclinic</small></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-card-section">
+    <div class="contact-section-heading">Working Hours</div>
+    <div class="hours-box">
+      <div class="hours-row"><span>Monday – Friday</span><strong>9:00 AM – 5:00 PM</strong></div>
+      <div class="hours-row"><span>Saturday &amp; Sunday</span><strong>By request</strong></div>
+      <p>Weekend appointments available by request — please call, text, or email to schedule.</p>
+    </div>
+  </div>
+
+  <div class="contact-card-section">
+    <div class="contact-section-heading">Locations</div>
+    <div class="location-card-grid">
+      <div class="location-card"><strong>Reston Office</strong><span>11862 Sunrise Valley Drive, Unit 101<br>Reston, VA 20191</span></div>
+      <div class="location-card"><strong>Aldie Office</strong><span>24560 Southpoint Dr, Ste 220<br>Aldie, VA 20105</span></div>
+    </div>
+  </div>
+</div>
+
+<form id="consultation-form-fields" action="https://api.web3forms.com/submit" method="POST">
+<input type="hidden" name="access_key" value="cb847ef3-92ce-43ee-8bc3-04ad68ae1427">
+<input name="name" placeholder="Full Name" required>
+<input name="phone" placeholder="Phone Number" required>
+<input name="email" type="email" placeholder="Email Address" required>
+<select name="service" required>
+<option value="">Service Interested In</option>
+<option>Wellness</option>
+<option>Medical Aesthetics</option>
+<option>Skin Treatment</option>
+<option>Laser</option>
+</select>
+<textarea name="message" placeholder="Tell us about your goals" required></textarea>
+          <label>
+            How did you hear about INFUDERM?
+            <select name="How did you hear about INFUDERM?" required>
+              <option value="">Please select one</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Google Search">Google Search</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Friend or Family Referral">Friend or Family Referral</option>
+              <option value="Physician / Provider Referral">Physician / Provider Referral</option>
+              <option value="Existing Patient">Existing Patient</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+
+<button class="btn" type="submit">Submit Request</button>
+</form></div></section>
+<section class="alt"><div class="container"><div class="section-head"><div class="eyebrow">Locations</div><h2>Visit INFUDERM in Reston & Aldie, VA.</h2><p>Both locations are available for your convenience.</p></div><div class="grid-2 map-grid"><div class="map-card"><div class="map-label">Reston Office</div><p class="map-address">11862 Sunrise Valley Drive, Unit 101, Reston, VA 20191<br><a class="btn outline" href="https://share.google/yzgrqfY1vbcRlE0at" target="_blank" rel="noopener">View Google Business Profile</a></p><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6206.006161434711!2d-77.357404!3d38.946758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b6490025cb129b%3A0xfb6a81fd382d3d8!2sINFUDERM%20Clinic!5e0!3m2!1sen!2sus!4v1782524847234!5m2!1sen!2sus" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div class="map-card"><div class="map-label">Aldie Office</div><p class="map-address">24560 Southpoint Dr, Ste 220, Aldie, VA 20105<br><a class="btn outline" href="https://share.google/rPeBSUVleuisXoZiP" target="_blank" rel="noopener">View Google Business Profile</a></p><iframe class="map" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=24560%20Southpoint%20Dr%20Ste%20220%20Aldie%20VA%2020105&output=embed"></iframe></div></div></div></section>
+</main><footer><p>© 2026 INFUDERM Clinic. All rights reserved.</p><p style="font-size:.84rem;margin-top:8px;">Medical Precision. Absolute Safety.</p></footer></body></html>
