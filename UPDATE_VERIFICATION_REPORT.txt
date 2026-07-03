@@ -1,0 +1,8 @@
+INFUDERM Update Verification
+============================
+Aldie iframe updated: True
+Contact Meta Pixel exact requested format: True
+Lead event pages: ['contact/index.html']
+Meta Pixel issue pages: []
+Total HTML pages: 22
+Aldie iframe replacement count: 1
