@@ -57,8 +57,16 @@ h1{
 }
 
 .username{
-    color:#cccccc;
+    display:inline-block;
     margin-top:6px;
+    color:#cccccc;
+    text-decoration:none;
+    transition:color .2s ease;
+}
+
+.username:hover{
+    color:#ffffff;
+    text-decoration:underline;
 }
 
 .bio{
@@ -132,12 +140,12 @@ h1{
 <div class="profile">
 
 <div class="avatar">
-<img src="logo.jpg" alt="Logo">
+<img src="https://infudermva.com/images/logo.png" alt="Logo">
 </div>
 
 <h1>Infuderm</h1>
 
-<div class="username">@infuderm</div>
+<a class="username" href="https://www.instagram.com/infudermclinic/" target="_blank" rel="noopener noreferrer">@infudermclinic</a>
 
 <div class="bio">
 Professional skincare • Medical aesthetics • Book an appointment or explore our services.
