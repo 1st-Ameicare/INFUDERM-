@@ -1,0 +1,2013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price & Treatment | INFUDERM Clinic</title>
+  <meta name="description" content="Explore INFUDERM pricing and treatment options for wellness, skin treatment, beauty enhancements, medical aesthetics, and laser services in Reston and Aldie, Virginia.">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .services-menu-page .services-hero-centered {
+      text-align: center;
+    }
+    .services-menu-page .services-hero-centered .container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    .services-menu-page .services-hero-centered .hydra-title,
+    .services-menu-page .services-hero-centered .hydra-subtitle,
+    .services-menu-page .services-hero-centered p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .services-menu-page .services-hero-centered .hydra-subtitle {
+      max-width: 780px;
+    }
+    .services-menu-page .services-hero-centered p {
+      max-width: 820px;
+    }
+    .services-menu-page .services-hero-centered .hero-actions {
+      justify-content: center;
+    }
+
+    .services-menu-page .price-menu-section {
+      padding-top: clamp(58px, 6vw, 88px);
+      padding-bottom: clamp(58px, 6vw, 88px);
+    }
+    .services-menu-page .service-category-block {
+      margin-bottom: clamp(64px, 7vw, 96px);
+    }
+    .services-menu-page .service-category-block:last-child {
+      margin-bottom: 0;
+    }
+    .services-menu-page .service-category-head {
+      margin-bottom: 30px;
+      max-width: 900px;
+    }
+    .services-menu-page .service-category-head h2 {
+      font-size: clamp(2rem, 3.6vw, 3.25rem);
+      line-height: 1.12;
+      margin-bottom: 10px;
+    }
+    .services-menu-page .service-category-head p {
+      max-width: 760px;
+    }
+
+    .services-menu-page .service-menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: clamp(24px, 3vw, 36px);
+      align-items: stretch;
+    }
+    .services-menu-page .service-menu-grid.three-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .services-menu-page .service-menu-card {
+      position: relative;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      padding: clamp(28px, 3vw, 38px) !important;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+    .services-menu-page .service-menu-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(240,217,144,.55);
+    }
+    .services-menu-page .service-menu-card h3 {
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .services-menu-page .service-menu-card p {
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+    .services-menu-page .service-menu-card .learn {
+      color: #f0d990;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .78rem;
+      margin-top: auto;
+      display: inline-block;
+      padding-top: 18px;
+    }
+
+    .services-menu-page .wellness-grid {
+      grid-template-columns: minmax(320px, .82fr) minmax(520px, 1.18fr);
+      gap: clamp(28px, 4vw, 44px);
+      align-items: stretch;
+    }
+    .services-menu-page .wellness-card {
+      min-height: auto;
+    }
+    .services-menu-page .wellness-card.glp-card {
+      justify-content: space-between;
+    }
+    .services-menu-page .badge-off {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      max-width: 100%;
+      margin-top: 16px;
+      color: #0D0F14;
+      background: linear-gradient(135deg,#f0d990,#d4af5a);
+      border-radius: 999px;
+      padding: 10px 16px;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: .74rem;
+      line-height: 1.25;
+    }
+    .services-menu-page .price-highlight {
+      margin-top: 18px;
+    }
+    .services-menu-page .price-line {
+      padding: 12px 0;
+      gap: 16px;
+      align-items: center;
+    }
+    .services-menu-page .old-price {
+      text-decoration: line-through;
+      opacity: .72;
+    }
+    .services-menu-page .offer-price {
+      font-weight: 800;
+      color: #f0d990;
+    }
+
+    .services-menu-page .iv-card {
+      min-height: auto;
+    }
+    .services-menu-page .iv-price-list {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 20px;
+    }
+    .services-menu-page .iv-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      border-bottom: 1px solid rgba(212,175,90,.2);
+      padding: 12px 0;
+      line-height: 1.45;
+    }
+    .services-menu-page .iv-row strong {
+      font-size: .95rem;
+      line-height: 1.45;
+    }
+    .services-menu-page .iv-row span {
+      white-space: nowrap;
+    }
+
+    .services-menu-page .facial-service-card {
+      min-height: 260px;
+    }
+    .services-menu-page .facial-service-card .badge-off {
+      margin-top: auto;
+    }
+
+    @media (max-width: 1120px) {
+      .services-menu-page .wellness-grid,
+      .services-menu-page .service-menu-grid.three-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .services-menu-page .iv-price-list {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 780px) {
+      .services-menu-page .service-menu-grid,
+      .services-menu-page .wellness-grid,
+      .services-menu-page .service-menu-grid.three-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-menu-page .service-menu-card {
+        min-height: auto;
+      }
+      .services-menu-page .iv-row {
+        display: block;
+      }
+      .services-menu-page .iv-row span {
+        display: block;
+        margin-top: 6px;
+      }
+      .services-menu-page .services-hero-centered {
+        text-align: left;
+      }
+      .services-menu-page .services-hero-centered .hero-actions {
+        justify-content: flex-start;
+      }
+    }
+  
+/* Final gap and IV cleanup */
+.compact-price-hero{
+  padding-top:clamp(58px,7vw,88px) !important;
+  padding-bottom:18px !important;
+}
+.compact-price-wrap{
+  padding-top:16px !important;
+  padding-bottom:44px !important;
+}
+.compact-category-section{
+  gap:18px !important;
+  margin-bottom:18px !important;
+}
+.compact-category-section:last-child{
+  margin-bottom:0 !important;
+}
+.compact-category-visual,
+.compact-category-content{
+  border-radius:22px !important;
+}
+.compact-category-content{
+  padding:18px 20px !important;
+}
+.compact-placeholder{
+  min-height:190px !important;
+  padding:18px !important;
+}
+.compact-placeholder.small{
+  min-height:110px !important;
+}
+.compact-visual-stack{
+  min-height:240px !important;
+}
+.compact-category-title{
+  margin-bottom:10px !important;
+  gap:12px !important;
+}
+.compact-category-title > span{
+  width:40px !important;
+  height:40px !important;
+}
+.compact-category-title h2{
+  margin-bottom:3px !important;
+}
+.compact-category-title p{
+  line-height:1.42 !important;
+}
+.compact-menu-row{
+  padding:9px 0 !important;
+}
+.compact-iv-panel{
+  margin-top:12px !important;
+  border-radius:18px !important;
+}
+.compact-iv-head{
+  padding:13px 16px !important;
+}
+.compact-iv-table th{
+  padding:10px 14px !important;
+}
+.compact-iv-table td{
+  padding:9px 14px !important;
+}
+.compact-iv-table .regular{
+  text-decoration:line-through;
+}
+.compact-iv-table .special{
+  color:#f0d990;
+  font-weight:900;
+}
+.compact-final-note{
+  margin-top:16px !important;
+  padding:14px 16px !important;
+}
+@media(min-width:1051px){
+  .compact-category-section{
+    grid-template-columns:270px minmax(0,1fr) !important;
+  }
+  .compact-category-section:nth-child(even){
+    grid-template-columns:minmax(0,1fr) 270px !important;
+  }
+}
+@media(max-width:1050px){
+  .compact-placeholder{
+    min-height:160px !important;
+  }
+  .compact-visual-stack{
+    min-height:150px !important;
+  }
+}
+
+
+/* Price & Treatment video media spots */
+.compact-video-box{
+  height:100%;
+  min-height:270px;
+  overflow:hidden;
+  background:rgba(0,0,0,.18);
+}
+.compact-video-box.small{
+  min-height:150px;
+  height:auto;
+  flex:1;
+}
+.compact-video-box video{
+  width:100%;
+  height:100%;
+  min-height:inherit;
+  display:block;
+  object-fit:cover;
+}
+.compact-visual-stack .compact-video-box:first-child{
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+@media(max-width:1050px){
+  .compact-video-box{
+    min-height:210px;
+  }
+  .compact-video-box.small{
+    min-height:190px;
+  }
+  .compact-visual-stack .compact-video-box:first-child{
+    border-bottom:0;
+    border-right:1px solid rgba(255,255,255,.08);
+  }
+}
+@media(max-width:540px){
+  .compact-visual-stack .compact-video-box:first-child{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+}
+
+
+/* Category explanatory text refinements */
+.category-extra-copy{
+  margin:8px 0 12px;
+  padding:12px 14px;
+  border:1px solid rgba(212,175,90,.18);
+  border-radius:16px;
+  background:rgba(255,255,255,.022);
+}
+.category-extra-copy p{
+  margin:0;
+  color:rgba(255,255,255,.70);
+  line-height:1.55;
+  font-size:.94rem;
+}
+.compact-category-section{
+  margin-bottom:22px !important;
+}
+.compact-category-content{
+  padding-bottom:20px !important;
+}
+.compact-menu-row{
+  padding-top:10px !important;
+  padding-bottom:10px !important;
+}
+
+
+/* Browser-safe video playback refinement */
+.compact-video-box video{
+  background:#0d0f14;
+}
+
+
+/* Medical Aesthetics refined layout */
+#cat-01 .compact-category-title{
+  display:block !important;
+  text-align:center !important;
+  margin-bottom:14px !important;
+}
+#cat-01 .compact-category-title > span{
+  margin:0 auto 8px !important;
+}
+#cat-01 .compact-category-title h2{
+  margin:0 !important;
+}
+#cat-01 .medical-box-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:8px;
+  margin-bottom:16px;
+}
+#cat-01 .medical-service-box{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  padding:20px 22px;
+  color:inherit;
+  text-decoration:none;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+#cat-01 .medical-service-box:hover{
+  background:rgba(212,175,90,.06);
+  border-color:rgba(240,217,144,.44);
+  transform:translateY(-2px);
+}
+#cat-01 .medical-service-box h3{
+  margin:0 0 8px;
+  color:#f0d990;
+  font-size:1.45rem;
+  line-height:1.16;
+}
+#cat-01 .medical-service-box p{
+  margin:0;
+  color:rgba(255,255,255,.72);
+  line-height:1.45;
+  font-size:.96rem;
+}
+#cat-01 .medical-service-box:nth-child(5){
+  grid-column:1 / -1;
+}
+#cat-01 .compact-iv-panel{
+  margin-top:16px !important;
+}
+@media(max-width:760px){
+  #cat-01 .medical-box-grid{
+    grid-template-columns:1fr;
+  }
+  #cat-01 .medical-service-box:nth-child(5){
+    grid-column:auto;
+  }
+}
+
+
+/* Skin Treatment refined box layout */
+#cat-01 .compact-category-title > span,
+#cat-02 .compact-category-title > span{
+  display:none !important;
+}
+#cat-01 .compact-category-title,
+#cat-02 .compact-category-title{
+  display:block !important;
+  text-align:center !important;
+  margin-bottom:14px !important;
+}
+#cat-01 .compact-category-title h2,
+#cat-02 .compact-category-title h2{
+  margin:0 !important;
+}
+#cat-02 .skin-box-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:8px;
+}
+#cat-02 .skin-service-box{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  padding:20px 22px;
+  color:inherit;
+  text-decoration:none;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+#cat-02 .skin-service-box:hover{
+  background:rgba(212,175,90,.06);
+  border-color:rgba(240,217,144,.44);
+  transform:translateY(-2px);
+}
+#cat-02 .skin-service-box h3{
+  margin:0 0 8px;
+  color:#f0d990;
+  font-size:1.45rem;
+  line-height:1.16;
+}
+#cat-02 .skin-service-box p{
+  margin:0 0 4px;
+  color:rgba(255,255,255,.72);
+  line-height:1.45;
+  font-size:.98rem;
+}
+#cat-02 .skin-service-box strong{
+  color:#f0d990;
+  font-weight:900;
+  font-size:1rem;
+}
+#cat-02 .skin-service-box .regular{
+  color:rgba(255,255,255,.58);
+  text-decoration:line-through;
+}
+#cat-02 .skin-service-box:nth-child(3){
+  grid-column:1 / -1;
+}
+@media(max-width:760px){
+  #cat-02 .skin-box-grid{
+    grid-template-columns:1fr;
+  }
+  #cat-02 .skin-service-box:nth-child(3){
+    grid-column:auto;
+  }
+}
+
+
+/* Skin Treatment refined line */
+#cat-02 .skin-refined-line{
+  margin:8px auto 0 !important;
+  max-width:720px;
+  color:rgba(255,255,255,.70);
+  line-height:1.5;
+  font-size:1rem;
+}
+
+
+/* Skin centered pricing + Beauty Enhancement box layout */
+#cat-02 .skin-service-box{
+  text-align:center !important;
+}
+#cat-02 .skin-service-box p,
+#cat-02 .skin-service-box strong{
+  display:block;
+  text-align:center !important;
+}
+#cat-02 .skin-service-box strong{
+  margin-top:6px;
+}
+#cat-01 .medical-service-box .service-subline{
+  color:rgba(255,255,255,.66) !important;
+  font-size:.92rem !important;
+  line-height:1.38 !important;
+  margin:0 0 8px !important;
+}
+#cat-03 .compact-category-title{
+  display:block !important;
+  text-align:center !important;
+  margin-bottom:14px !important;
+}
+#cat-03 .compact-category-title > span{
+  display:none !important;
+}
+#cat-03 .compact-category-title h2{
+  margin:0 !important;
+}
+#cat-03 .beauty-refined-line{
+  margin:8px auto 0 !important;
+  max-width:720px;
+  color:rgba(255,255,255,.70);
+  line-height:1.5;
+  font-size:1rem;
+}
+#cat-03 .beauty-box-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:14px;
+}
+#cat-03 .beauty-service-box{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  padding:20px 22px;
+  color:inherit;
+  text-decoration:none;
+  text-align:center;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+#cat-03 .beauty-service-box:hover{
+  background:rgba(212,175,90,.06);
+  border-color:rgba(240,217,144,.44);
+  transform:translateY(-2px);
+}
+#cat-03 .beauty-service-box h3{
+  margin:0 0 8px;
+  color:#f0d990;
+  font-size:1.45rem;
+  line-height:1.16;
+}
+#cat-03 .beauty-service-box p{
+  margin:0;
+  color:rgba(255,255,255,.72);
+  line-height:1.45;
+  font-size:.96rem;
+}
+#cat-03 .beauty-service-box:nth-child(3){
+  grid-column:1 / -1;
+}
+@media(max-width:760px){
+  #cat-03 .beauty-box-grid{
+    grid-template-columns:1fr;
+  }
+  #cat-03 .beauty-service-box:nth-child(3){
+    grid-column:auto;
+  }
+}
+
+
+/* Final category refinements */
+#cat-02 .skin-box-grid,
+#cat-03 .beauty-box-grid{
+  margin-top:22px !important;
+}
+#cat-04 .compact-category-title{
+  display:block !important;
+  text-align:center !important;
+  margin-bottom:16px !important;
+}
+#cat-04 .compact-category-title > span{
+  display:none !important;
+}
+#cat-04 .compact-category-title h2{
+  margin:0 !important;
+}
+#cat-04 .laser-refined-line{
+  margin:8px auto 0 !important;
+  max-width:720px;
+  color:rgba(255,255,255,.70);
+  line-height:1.5;
+  font-size:1rem;
+}
+#cat-04 .laser-service-box{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:18px;
+  background:linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  padding:24px 26px;
+  text-align:center;
+}
+#cat-04 .laser-service-box h3{
+  margin:0 0 14px;
+  color:#f0d990;
+  font-size:1.55rem;
+  line-height:1.16;
+}
+#cat-04 .laser-service-box p{
+  margin:0 auto 14px;
+  max-width:760px;
+  color:rgba(255,255,255,.74);
+  line-height:1.58;
+  font-size:1rem;
+}
+#cat-04 .laser-price-line{
+  margin-top:18px;
+  border-top:1px solid rgba(255,255,255,.08);
+  padding-top:16px;
+}
+#cat-04 .laser-price-line strong{
+  display:block;
+  color:#f0d990;
+  font-size:1.08rem;
+  margin-bottom:6px;
+}
+#cat-04 .laser-price-line span{
+  color:rgba(255,255,255,.76);
+  font-weight:800;
+}
+
+
+/* Mobile IV/IM price table fix */
+@media(max-width:760px){
+  .compact-iv-table-wrap{
+    overflow:visible !important;
+  }
+  .compact-iv-table{
+    width:100% !important;
+    min-width:0 !important;
+    border-collapse:separate !important;
+    border-spacing:0 !important;
+  }
+  .compact-iv-table thead{
+    display:none !important;
+  }
+  .compact-iv-table tr{
+    display:block !important;
+    border:1px solid rgba(212,175,90,.22) !important;
+    border-radius:16px !important;
+    padding:12px 14px !important;
+    margin:0 0 12px !important;
+    background:rgba(255,255,255,.035) !important;
+  }
+  .compact-iv-table td{
+    display:flex !important;
+    justify-content:space-between !important;
+    align-items:flex-start !important;
+    gap:14px !important;
+    width:100% !important;
+    border:0 !important;
+    padding:7px 0 !important;
+    text-align:right !important;
+    white-space:normal !important;
+  }
+  .compact-iv-table td::before{
+    content:attr(data-label);
+    flex:0 0 44%;
+    color:#f0d990;
+    font-weight:800;
+    text-align:left;
+  }
+  .compact-iv-table td:first-child{
+    display:block !important;
+    text-align:left !important;
+    font-weight:900 !important;
+    color:#fff !important;
+    padding-bottom:10px !important;
+  }
+  .compact-iv-table td:first-child::before{
+    content:"Service";
+    display:block;
+    margin-bottom:4px;
+  }
+}
+
+</style>
+
+
+<style>
+/* INFUDERM fixed running grand opening top banner */
+:root{
+  --infuderm-banner-height:42px;
+}
+body{
+  padding-top:var(--infuderm-banner-height);
+}
+.top-bar.infuderm-running-banner{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100000;
+  overflow:hidden;
+  white-space:nowrap;
+  padding:0;
+  height:var(--infuderm-banner-height);
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid rgba(240,217,144,.35);
+  background:linear-gradient(90deg,#0d0f14,#1a1410,#0d0f14);
+  color:#f0d990;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  box-shadow:0 6px 22px rgba(0,0,0,.22);
+}
+.infuderm-running-track{
+  display:inline-flex;
+  align-items:center;
+  min-width:max-content;
+  animation:infudermMarquee 22s linear infinite;
+}
+.infuderm-running-track span{
+  display:inline-flex;
+  align-items:center;
+  padding:0 36px;
+  font-size:.92rem;
+}
+.infuderm-running-track span::after{
+  content:"◆";
+  color:#d4af5a;
+  margin-left:36px;
+  font-size:.7rem;
+}
+@keyframes infudermMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+@media(max-width:640px){
+  :root{--infuderm-banner-height:38px;}
+  .infuderm-running-track span{font-size:.78rem;padding:0 24px;}
+  .infuderm-running-track span::after{margin-left:24px;}
+}
+</style>
+
+
+<style>
+/* INFUDERM fixed banner + header spacing repair */
+:root{
+  --infuderm-banner-height:42px;
+  --infuderm-header-height:82px;
+}
+body{
+  padding-top:calc(var(--infuderm-banner-height) + var(--infuderm-header-height)) !important;
+}
+.top-bar.infuderm-running-banner{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100001 !important;
+  height:var(--infuderm-banner-height) !important;
+}
+header{
+  position:fixed !important;
+  top:var(--infuderm-banner-height) !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100000 !important;
+  min-height:var(--infuderm-header-height) !important;
+  background:rgba(8,9,12,.94) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(212,175,90,.22);
+}
+header .nav{
+  min-height:var(--infuderm-header-height) !important;
+  align-items:center !important;
+}
+@media(max-width:640px){
+  :root{
+    --infuderm-banner-height:38px;
+    --infuderm-header-height:76px;
+  }
+}
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1544750100428362');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1544750100428362&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+/* Price & Treatment full aesthetic redesign */
+.price-art-hero{
+  padding:clamp(78px,9vw,120px) 0 clamp(38px,5vw,58px);
+  position:relative;
+  overflow:hidden;
+}
+.price-art-hero:before{
+  content:"";
+  position:absolute;
+  inset:12% -18% auto auto;
+  width:520px;
+  height:520px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,90,.13),rgba(212,175,90,0) 68%);
+  pointer-events:none;
+}
+.price-hero-inner{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 340px;
+  gap:clamp(28px,5vw,58px);
+  align-items:end;
+  position:relative;
+  z-index:1;
+}
+.price-art-hero h1{
+  margin:8px 0 16px;
+  font-size:clamp(2.65rem,6vw,5.2rem);
+  line-height:.95;
+}
+.price-art-hero p{
+  max-width:760px;
+  color:rgba(255,255,255,.76);
+  line-height:1.72;
+}
+.price-hero-card{
+  border:1px solid rgba(212,175,90,.26);
+  border-radius:28px;
+  background:linear-gradient(145deg,rgba(255,255,255,.052),rgba(255,255,255,.018));
+  padding:26px;
+  box-shadow:0 22px 60px rgba(0,0,0,.20);
+}
+.price-hero-card strong{
+  display:block;
+  color:#f0d990;
+  font-size:1.2rem;
+  margin-bottom:8px;
+}
+.price-hero-card span{
+  display:block;
+  color:rgba(255,255,255,.70);
+  line-height:1.55;
+}
+.price-jump{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:26px;
+}
+.price-jump a{
+  border:1px solid rgba(212,175,90,.24);
+  border-radius:999px;
+  padding:9px 13px;
+  color:#f0d990;
+  text-decoration:none;
+  background:rgba(255,255,255,.022);
+  font-weight:800;
+  font-size:.84rem;
+}
+.price-jump a:hover{
+  background:rgba(212,175,90,.08);
+}
+.price-art-wrap{
+  padding:clamp(34px,6vw,68px) 0 clamp(54px,7vw,90px);
+}
+.aesthetic-category{
+  margin-bottom:34px;
+}
+.aesthetic-category:last-of-type{
+  margin-bottom:0;
+}
+.category-title{
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr);
+  gap:18px;
+  align-items:start;
+  margin-bottom:15px;
+}
+.category-title > span{
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(212,175,90,.35);
+  color:#f0d990;
+  font-weight:950;
+  background:rgba(212,175,90,.06);
+}
+.category-title h2{
+  margin:0 0 6px;
+  font-size:clamp(1.72rem,3vw,2.45rem);
+}
+.category-title p{
+  margin:0;
+  color:rgba(255,255,255,.66);
+  line-height:1.55;
+  max-width:820px;
+}
+.aesthetic-menu-panel{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:28px;
+  background:rgba(255,255,255,.027);
+  overflow:hidden;
+}
+.aesthetic-service-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(180px,260px) 88px;
+  gap:18px;
+  align-items:center;
+  padding:20px 24px;
+  border-top:1px solid rgba(255,255,255,.075);
+  color:inherit;
+  text-decoration:none;
+  transition:background .18s ease;
+}
+.aesthetic-service-row:first-child{
+  border-top:0;
+}
+.aesthetic-service-row:hover{
+  background:rgba(212,175,90,.055);
+}
+.service-main h3{
+  margin:0 0 6px;
+  color:#fff;
+  font-size:1.14rem;
+  line-height:1.25;
+}
+.service-main p{
+  margin:0;
+  color:rgba(255,255,255,.64);
+  line-height:1.48;
+  font-size:.94rem;
+}
+.service-price{
+  color:#f0d990;
+  font-weight:900;
+  line-height:1.35;
+}
+.service-price .regular{
+  display:block;
+  color:rgba(255,255,255,.55);
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+  text-decoration-color:rgba(240,217,144,.55);
+  margin-bottom:4px;
+}
+.service-price .special{
+  display:block;
+  color:#f0d990;
+}
+.service-arrow{
+  justify-self:end;
+  color:#fff;
+  border:1px solid rgba(212,175,90,.26);
+  border-radius:999px;
+  padding:8px 12px;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.iv-full-panel{
+  margin:16px;
+  border:1px solid rgba(212,175,90,.20);
+  border-radius:24px;
+  background:linear-gradient(145deg,rgba(212,175,90,.06),rgba(255,255,255,.02));
+  overflow:hidden;
+}
+.iv-full-head{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  align-items:flex-start;
+  padding:22px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.iv-full-head h3{
+  margin:0 0 6px;
+  color:#f0d990;
+  font-size:1.28rem;
+}
+.iv-full-head p{
+  margin:0;
+  color:rgba(255,255,255,.66);
+  line-height:1.5;
+}
+.iv-full-head a{
+  color:#fff;
+  text-decoration:none;
+  white-space:nowrap;
+  font-weight:850;
+  font-size:.88rem;
+}
+.iv-menu-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.iv-menu-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(150px,210px);
+  gap:16px;
+  padding:16px 20px;
+  border-top:1px solid rgba(255,255,255,.07);
+  border-right:1px solid rgba(255,255,255,.07);
+  color:inherit;
+  text-decoration:none;
+  align-items:center;
+}
+.iv-menu-row:nth-child(-n+2){
+  border-top:0;
+}
+.iv-menu-row:nth-child(even){
+  border-right:0;
+}
+.iv-menu-row span{
+  color:#fff;
+  line-height:1.35;
+}
+.iv-menu-row strong{
+  color:#f0d990;
+  text-align:right;
+  line-height:1.35;
+}
+.iv-menu-row .regular{
+  display:block;
+  color:rgba(255,255,255,.55);
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+  text-decoration-color:rgba(240,217,144,.55);
+}
+.iv-menu-row .special{
+  display:block;
+  color:#f0d990;
+}
+.iv-menu-row .special.soft{
+  font-size:.9rem;
+}
+.price-final-note{
+  margin-top:30px;
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:22px;
+  background:rgba(255,255,255,.025);
+  padding:20px 22px;
+  color:rgba(255,255,255,.70);
+  line-height:1.6;
+}
+@media(max-width:980px){
+  .price-hero-inner{
+    grid-template-columns:1fr;
+  }
+  .aesthetic-service-row{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .service-arrow{
+    justify-self:start;
+  }
+  .iv-menu-grid{
+    grid-template-columns:1fr;
+  }
+  .iv-menu-row,
+  .iv-menu-row:nth-child(even){
+    border-right:0;
+  }
+  .iv-menu-row:nth-child(2){
+    border-top:1px solid rgba(255,255,255,.07);
+  }
+}
+@media(max-width:640px){
+  .category-title{
+    grid-template-columns:1fr;
+  }
+  .iv-full-head{
+    flex-direction:column;
+  }
+  .iv-menu-row{
+    grid-template-columns:1fr;
+  }
+  .iv-menu-row strong{
+    text-align:left;
+  }
+}
+</style>
+
+
+<style>
+/* Price & Treatment photo placeholder redesign */
+.photo-price-hero{
+  padding:clamp(76px,9vw,116px) 0 clamp(36px,5vw,56px);
+  position:relative;
+  overflow:hidden;
+}
+.photo-price-hero:before{
+  content:"";
+  position:absolute;
+  right:-160px;
+  top:70px;
+  width:480px;
+  height:480px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,90,.14),rgba(212,175,90,0) 68%);
+  pointer-events:none;
+}
+.photo-price-hero .container{
+  position:relative;
+  z-index:1;
+}
+.photo-price-hero h1{
+  margin:8px 0 16px;
+  font-size:clamp(2.65rem,6vw,5rem);
+  line-height:.96;
+}
+.photo-price-hero p{
+  max-width:850px;
+  color:rgba(255,255,255,.76);
+  line-height:1.72;
+}
+.photo-hero-panel{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,360px);
+  gap:26px;
+  align-items:end;
+}
+.photo-promo-card{
+  border:1px solid rgba(212,175,90,.28);
+  border-radius:26px;
+  background:linear-gradient(145deg,rgba(212,175,90,.10),rgba(255,255,255,.022));
+  padding:24px;
+}
+.photo-promo-card strong{
+  color:#f0d990;
+  font-size:1.25rem;
+  display:block;
+  margin-bottom:8px;
+}
+.photo-promo-card span{
+  color:rgba(255,255,255,.72);
+  line-height:1.55;
+}
+.photo-price-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:26px;
+}
+.photo-price-wrap{
+  padding:clamp(32px,5vw,64px) 0 clamp(54px,7vw,86px);
+}
+.photo-category-section{
+  display:grid;
+  grid-template-columns:360px minmax(0,1fr);
+  gap:28px;
+  align-items:stretch;
+  margin-bottom:30px;
+}
+.photo-category-section:nth-child(even){
+  grid-template-columns:minmax(0,1fr) 360px;
+}
+.photo-category-section:nth-child(even) .photo-category-visual{
+  order:2;
+}
+.photo-category-section:nth-child(even) .photo-category-content{
+  order:1;
+}
+.photo-category-visual,
+.photo-category-content{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:28px;
+  background:rgba(255,255,255,.026);
+  overflow:hidden;
+}
+.photo-category-visual{
+  min-height:360px;
+}
+.photo-placeholder{
+  height:100%;
+  min-height:360px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:24px;
+  text-align:center;
+  background:
+    linear-gradient(135deg,rgba(212,175,90,.10),rgba(255,255,255,.02)),
+    radial-gradient(circle at 30% 20%,rgba(240,217,144,.16),rgba(240,217,144,0) 46%);
+}
+.photo-placeholder:before{
+  content:"";
+  width:72px;
+  height:72px;
+  border-radius:22px;
+  border:1px solid rgba(212,175,90,.34);
+  background:rgba(0,0,0,.12);
+  box-shadow:inset 0 0 0 10px rgba(255,255,255,.018);
+}
+.photo-placeholder span{
+  color:#f0d990;
+  font-weight:900;
+  font-size:1.05rem;
+}
+.photo-placeholder small{
+  color:rgba(255,255,255,.62);
+}
+.photo-category-content{
+  padding:26px;
+}
+.photo-category-title{
+  display:grid;
+  grid-template-columns:56px minmax(0,1fr);
+  gap:16px;
+  align-items:start;
+  margin-bottom:18px;
+}
+.photo-category-title > span{
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(212,175,90,.36);
+  border-radius:50%;
+  color:#f0d990;
+  font-weight:950;
+  background:rgba(212,175,90,.06);
+}
+.photo-category-title h2{
+  margin:0 0 6px;
+  font-size:clamp(1.65rem,2.8vw,2.35rem);
+}
+.photo-category-title p{
+  margin:0;
+  color:rgba(255,255,255,.66);
+  line-height:1.55;
+}
+.photo-menu-list{
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.photo-menu-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(170px,250px) 64px;
+  gap:16px;
+  align-items:center;
+  padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,.075);
+  color:inherit;
+  text-decoration:none;
+}
+.photo-menu-row:hover .photo-menu-name,
+.photo-menu-row:hover .photo-menu-view{
+  color:#f0d990;
+}
+.photo-menu-name{
+  color:#fff;
+  font-weight:850;
+  font-size:1.03rem;
+}
+.photo-menu-price{
+  color:#f0d990;
+  font-weight:900;
+  line-height:1.35;
+}
+.photo-menu-price.muted{
+  color:rgba(255,255,255,.62);
+  font-weight:750;
+}
+.photo-menu-price .regular{
+  display:block;
+  color:rgba(255,255,255,.55);
+  text-decoration:line-through;
+  text-decoration-thickness:2px;
+  text-decoration-color:rgba(240,217,144,.55);
+}
+.photo-menu-price .special{
+  display:block;
+  color:#f0d990;
+}
+.photo-menu-view{
+  justify-self:end;
+  color:rgba(255,255,255,.82);
+  font-size:.78rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.photo-iv-panel{
+  margin-top:18px;
+  border:1px solid rgba(212,175,90,.20);
+  border-radius:22px;
+  background:rgba(212,175,90,.045);
+  overflow:hidden;
+}
+.photo-iv-head{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.photo-iv-head h3{
+  margin:0 0 4px;
+  color:#f0d990;
+  font-size:1.16rem;
+}
+.photo-iv-head p{
+  margin:0;
+  color:rgba(255,255,255,.64);
+  font-size:.94rem;
+}
+.photo-iv-head a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:850;
+  white-space:nowrap;
+  font-size:.86rem;
+}
+.photo-iv-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.photo-iv-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(130px,190px);
+  gap:12px;
+  padding:13px 16px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  border-right:1px solid rgba(255,255,255,.07);
+  color:inherit;
+  text-decoration:none;
+}
+.photo-iv-row:nth-child(even){
+  border-right:0;
+}
+.photo-iv-row span{
+  color:#fff;
+  line-height:1.35;
+}
+.photo-iv-row strong{
+  color:#f0d990;
+  text-align:right;
+  line-height:1.35;
+}
+.photo-iv-row .regular{
+  display:block;
+  color:rgba(255,255,255,.55);
+  text-decoration:line-through;
+}
+.photo-iv-row .special{
+  display:block;
+  color:#f0d990;
+}
+.photo-final-note{
+  margin-top:28px;
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:20px;
+  background:rgba(255,255,255,.025);
+  padding:18px 20px;
+  color:rgba(255,255,255,.70);
+  line-height:1.6;
+}
+@media(max-width:1050px){
+  .photo-category-section,
+  .photo-category-section:nth-child(even){
+    grid-template-columns:1fr;
+  }
+  .photo-category-section:nth-child(even) .photo-category-visual,
+  .photo-category-section:nth-child(even) .photo-category-content{
+    order:initial;
+  }
+  .photo-category-visual,
+  .photo-placeholder{
+    min-height:260px;
+  }
+}
+@media(max-width:760px){
+  .photo-hero-panel{
+    grid-template-columns:1fr;
+  }
+  .photo-menu-row{
+    grid-template-columns:1fr;
+    gap:7px;
+  }
+  .photo-menu-view{
+    justify-self:start;
+  }
+  .photo-iv-head{
+    flex-direction:column;
+  }
+  .photo-iv-grid{
+    grid-template-columns:1fr;
+  }
+  .photo-iv-row,
+  .photo-iv-row:nth-child(even){
+    border-right:0;
+  }
+  .photo-iv-row{
+    grid-template-columns:1fr;
+  }
+  .photo-iv-row strong{
+    text-align:left;
+  }
+}
+</style>
+
+
+<style>
+/* Price & Treatment compact visual redesign */
+.compact-price-hero{
+  padding:clamp(70px,8vw,108px) 0 34px;
+  position:relative;
+  overflow:hidden;
+}
+.compact-price-hero:before{
+  content:"";
+  position:absolute;
+  right:-150px;
+  top:60px;
+  width:450px;
+  height:450px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,90,.13),rgba(212,175,90,0) 68%);
+  pointer-events:none;
+}
+.compact-hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(260px,350px);
+  gap:24px;
+  align-items:end;
+  position:relative;
+  z-index:1;
+}
+.compact-price-hero h1{
+  margin:8px 0 14px;
+  font-size:clamp(2.65rem,6vw,5rem);
+  line-height:.96;
+}
+.compact-price-hero p{
+  max-width:840px;
+  color:rgba(255,255,255,.76);
+  line-height:1.68;
+}
+.compact-promo-card{
+  border:1px solid rgba(212,175,90,.28);
+  border-radius:24px;
+  background:linear-gradient(145deg,rgba(212,175,90,.10),rgba(255,255,255,.022));
+  padding:22px;
+}
+.compact-promo-card strong{
+  display:block;
+  color:#f0d990;
+  font-size:1.22rem;
+  margin-bottom:8px;
+}
+.compact-promo-card span{
+  color:rgba(255,255,255,.72);
+  line-height:1.5;
+}
+.compact-price-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:22px;
+}
+.compact-price-wrap{
+  padding:28px 0 clamp(50px,7vw,82px);
+}
+.compact-category-section{
+  display:grid;
+  grid-template-columns:310px minmax(0,1fr);
+  gap:22px;
+  align-items:stretch;
+  margin-bottom:22px;
+}
+.compact-category-section:last-child{
+  margin-bottom:0;
+}
+.compact-category-section:nth-child(even){
+  grid-template-columns:minmax(0,1fr) 310px;
+}
+.compact-category-section:nth-child(even) .compact-category-visual{
+  order:2;
+}
+.compact-category-section:nth-child(even) .compact-category-content{
+  order:1;
+}
+.compact-category-visual,
+.compact-category-content{
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:26px;
+  background:rgba(255,255,255,.026);
+  overflow:hidden;
+}
+.compact-category-content{
+  padding:22px;
+}
+.compact-placeholder{
+  height:100%;
+  min-height:270px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  padding:22px;
+  text-align:center;
+  background:
+    linear-gradient(135deg,rgba(212,175,90,.10),rgba(255,255,255,.02)),
+    radial-gradient(circle at 30% 20%,rgba(240,217,144,.15),rgba(240,217,144,0) 46%);
+}
+.compact-placeholder.small{
+  min-height:150px;
+  height:auto;
+  flex:1;
+}
+.compact-placeholder:before{
+  content:"";
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  border:1px solid rgba(212,175,90,.34);
+  background:rgba(0,0,0,.12);
+}
+.compact-placeholder span{
+  color:#f0d990;
+  font-weight:900;
+}
+.compact-placeholder small{
+  color:rgba(255,255,255,.62);
+}
+.compact-visual-stack{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:0;
+  height:100%;
+  min-height:320px;
+}
+.compact-visual-stack .compact-placeholder:first-child{
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.compact-category-title{
+  display:grid;
+  grid-template-columns:50px minmax(0,1fr);
+  gap:14px;
+  align-items:start;
+  margin-bottom:14px;
+}
+.compact-category-title > span{
+  width:44px;
+  height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(212,175,90,.36);
+  border-radius:50%;
+  color:#f0d990;
+  font-weight:950;
+  background:rgba(212,175,90,.06);
+}
+.compact-category-title h2{
+  margin:0 0 4px;
+  font-size:clamp(1.55rem,2.7vw,2.25rem);
+}
+.compact-category-title p{
+  margin:0;
+  color:rgba(255,255,255,.66);
+  line-height:1.48;
+}
+.compact-menu-list{
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.compact-menu-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(160px,240px) 54px;
+  gap:14px;
+  align-items:center;
+  padding:11px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  color:inherit;
+  text-decoration:none;
+}
+.compact-menu-row:hover .compact-menu-name,
+.compact-menu-row:hover .compact-menu-view{
+  color:#f0d990;
+}
+.compact-menu-name{
+  color:#fff;
+  font-weight:850;
+  font-size:1rem;
+}
+.compact-menu-price{
+  color:#f0d990;
+  font-weight:900;
+  line-height:1.28;
+}
+.compact-menu-price.muted{
+  color:rgba(255,255,255,.68);
+  font-weight:750;
+}
+.compact-menu-price .regular{
+  display:block;
+  color:rgba(255,255,255,.55);
+  text-decoration:line-through;
+}
+.compact-menu-price .special{
+  display:block;
+  color:#f0d990;
+}
+.compact-menu-view{
+  justify-self:end;
+  color:rgba(255,255,255,.82);
+  font-size:.74rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-weight:900;
+}
+.compact-iv-panel{
+  margin-top:16px;
+  border:1px solid rgba(212,175,90,.20);
+  border-radius:20px;
+  background:rgba(212,175,90,.04);
+  overflow:hidden;
+}
+.compact-iv-head{
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  padding:16px 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.compact-iv-head h3{
+  margin:0 0 4px;
+  color:#f0d990;
+  font-size:1.12rem;
+}
+.compact-iv-head p{
+  margin:0;
+  color:rgba(255,255,255,.64);
+  font-size:.92rem;
+}
+.compact-iv-head a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:850;
+  white-space:nowrap;
+  font-size:.84rem;
+}
+.compact-iv-table{
+  width:100%;
+  border-collapse:collapse;
+}
+.compact-iv-table th{
+  color:#f0d990;
+  font-size:.76rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  text-align:left;
+  padding:12px 16px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:rgba(255,255,255,.025);
+}
+.compact-iv-table td{
+  padding:12px 16px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  vertical-align:middle;
+}
+.compact-iv-table tbody tr:last-child td{
+  border-bottom:0;
+}
+.compact-iv-table .regular{
+  color:rgba(255,255,255,.58);
+  text-decoration:line-through;
+}
+.compact-iv-table .special{
+  color:#f0d990;
+  font-weight:900;
+}
+.compact-final-note{
+  margin-top:22px;
+  border:1px solid rgba(212,175,90,.22);
+  border-radius:20px;
+  background:rgba(255,255,255,.025);
+  padding:16px 18px;
+  color:rgba(255,255,255,.70);
+  line-height:1.55;
+}
+@media(max-width:1050px){
+  .compact-category-section,
+  .compact-category-section:nth-child(even){
+    grid-template-columns:1fr;
+  }
+  .compact-category-section:nth-child(even) .compact-category-visual,
+  .compact-category-section:nth-child(even) .compact-category-content{
+    order:initial;
+  }
+  .compact-visual-stack{
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr;
+    min-height:190px;
+  }
+  .compact-visual-stack .compact-placeholder:first-child{
+    border-bottom:0;
+    border-right:1px solid rgba(255,255,255,.08);
+  }
+  .compact-placeholder{
+    min-height:210px;
+  }
+}
+@media(max-width:760px){
+  .compact-hero-grid{
+    grid-template-columns:1fr;
+  }
+  .compact-menu-row{
+    grid-template-columns:1fr;
+    gap:6px;
+  }
+  .compact-menu-view{
+    justify-self:start;
+  }
+  .compact-iv-head{
+    flex-direction:column;
+  }
+  .compact-iv-table-wrap{
+    overflow-x:auto;
+  }
+  .compact-iv-table{
+    min-width:560px;
+  }
+}
+@media(max-width:540px){
+  .compact-category-title{
+    grid-template-columns:1fr;
+  }
+  .compact-visual-stack{
+    grid-template-columns:1fr;
+  }
+  .compact-visual-stack .compact-placeholder:first-child{
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+}
+</style>
+
+</head>
+<body class="services-menu-page">
+  <div class="top-bar infuderm-running-banner" aria-label="Grand opening special">
+  <div class="infuderm-running-track">
+    <span>GRAND OPENING 50% OFF on Selected Service</span>
+    <span>GRAND OPENING 50% OFF on Selected Service</span>
+    <span>GRAND OPENING 50% OFF on Selected Service</span>
+    <span>GRAND OPENING 50% OFF on Selected Service</span>
+  </div>
+</div>
+  <header>
+    <nav class="nav">
+      <a href="../"><img class="logo no-image-click" src="../images/logo.png" alt="INFUDERM Logo"></a>
+      <div class="nav-links">
+        <a href="../about/">About</a>
+        <a href="../services/">Price &amp; Treatment</a><a href="../special-packages/">Packages</a>
+        <a href="../team/">Meet Our Team</a>
+        <a href="../contact/">Contact Us</a>
+      </div>
+      <a class="btn" href="https://www.myaestheticspro.com/BN/index.cfm?46FF8AA241AC7025EFDAC03AF713CF8A4CFC2165279C2B6FC9B29ADF9D0A6FBB" target="_blank" rel="noopener">Book Free Consultation</a>
+    </nav>
+  </header>
+
+  <main>
+<section class="hero compact-price-hero">
+  <div class="container compact-hero-grid">
+    <div>
+      <div class="eyebrow">INFUDERM Clinic Services</div>
+      <h1>Price &amp; Treatment</h1>
+      <p>Explore treatments by category. Confirmed prices remain listed where available, and services requiring evaluation show price based on consultation.</p>
+      <div class="compact-price-actions">
+        <a class="btn" href="https://www.myaestheticspro.com/BN/index.cfm?46FF8AA241AC7025EFDAC03AF713CF8A4CFC2165279C2B6FC9B29ADF9D0A6FBB" target="_blank" rel="noopener">Book Free Consultation</a>
+        <a class="btn outline" href="../special-packages/">View Packages</a>
+      </div>
+    </div>
+    <div class="compact-promo-card">
+      <strong>Grand Opening Special</strong>
+      <span>Up to 50% OFF select services. Final pricing and recommendations are confirmed during consultation.</span>
+    </div>
+  </div>
+</section>
+
+<section class="compact-price-wrap">
+  <div class="container">
+    
+          
+          <section class="compact-category-section" id="cat-01">
+            <div class="compact-category-visual">
+
+            <div class="compact-visual-stack">
+              <div class="compact-video-box small">
+      <video autoplay muted loop playsinline preload="auto" aria-label="Medical aesthetics video">
+        <source src="../images/price-botox.mp4" type="video/mp4">
+      </video>
+    </div>
+              <div class="compact-video-box small">
+      <video autoplay muted loop playsinline preload="auto" aria-label="IV therapy video">
+        <source src="../images/price-iv.mp4" type="video/mp4">
+      </video>
+    </div>
+            </div>
+            </div>
+            <div class="compact-category-content">
+              <div class="compact-category-title">
+<div>
+                  <h2>Medical Aesthetics &amp; Wellness</h2>
+                </div>
+              </div>
+
+              <div class="medical-box-grid">
+                <a class="medical-service-box" href="botox/">
+                  <h3>Botox</h3>
+                  <p>Price based on consultation</p>
+                </a>
+                <a class="medical-service-box" href="dermal-fillers/">
+                  <h3>Dermal Filler</h3>
+                  <p>Price based on consultation</p>
+                </a>
+                <a class="medical-service-box" href="prp-prf/">
+                  <h3>PRP/PRF</h3>
+                  <p>Price based on consultation</p>
+                </a>
+                <a class="medical-service-box" href="morpheus8/">
+                  <h3>Morpheus8 (RF Microneedling)</h3>
+                  <p>Price based on consultation</p>
+                </a>
+                <a class="medical-service-box" href="medical-weight-loss-glp-1-injections-northern-virginia/">
+                  <h3>GLP-1</h3>
+                  <p class="service-subline">Personalized medical weight management with consultation-based planning, provider review, and ongoing support.</p>
+                  <p>Price based on consultation</p>
+                </a>
+              </div>
+
+              <div class="compact-iv-panel">
+                <div class="compact-iv-head">
+                  <div>
+                    <h3>IV / IM Therapy Menu</h3>
+                    <p>Approved IV/IM services and pricing.</p>
+                  </div>
+                  <a href="iv-therapy-wellness-injections-northern-virginia/">Learn more about IV/IM</a>
+                </div>
+                <div class="compact-iv-table-wrap">
+                  <table class="compact-iv-table">
+                    <thead>
+                      <tr>
+                        <th>Service</th>
+                        <th>Regular</th>
+                        <th>Grand Opening</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td data-label="Service">Glutathione IM 200 mg</td><td data-label="Regular"><span class="regular">$50</span></td><td data-label="Grand Opening"><span class="special">$39</span></td></tr>
+                      <tr><td data-label="Service">Plain NS or LR Hydration</td><td data-label="Regular"><span class="regular">$99</span></td><td data-label="Grand Opening"><span class="special">$79</span></td></tr>
+                      <tr><td data-label="Service">Get-Up-and-Go</td><td data-label="Regular"><span class="regular">$175</span></td><td data-label="Grand Opening"><span class="special">$99</span></td></tr>
+                      <tr><td data-label="Service">Immunity</td><td data-label="Regular"><span class="regular">$199</span></td><td data-label="Grand Opening"><span class="special">$99</span></td></tr>
+                      <tr><td data-label="Service">Quench</td><td data-label="Regular"><span class="regular">$109</span></td><td data-label="Grand Opening"><span class="special">$99</span></td></tr>
+                      <tr><td data-label="Service">Reboot / Hangover Relief</td><td data-label="Regular"><span class="regular">$199</span></td><td data-label="Grand Opening"><span class="special">$99</span></td></tr>
+                      <tr><td data-label="Service">Glutathione IV with NS Hydration</td><td data-label="Regular"><span class="regular">$199</span></td><td data-label="Grand Opening"><span class="special">$99</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="compact-category-section" id="cat-02">
+            <div class="compact-category-visual">
+              <div class="compact-video-box">
+      <video autoplay muted loop playsinline preload="auto" aria-label="HydraFacial skin treatment video">
+        <source src="../images/price-hydrafacial.mp4" type="video/mp4">
+      </video>
+    </div>
+            </div>
+            <div class="compact-category-content">
+              <div class="compact-category-title">
+                <div>
+                  <h2>Skin Treatment</h2>
+                  <p class="skin-refined-line">Skin-focused treatments designed to improve texture, hydration, radiance, and collagen support.</p>
+                </div>
+              </div>
+
+              <div class="skin-box-grid">
+                <a class="skin-service-box" href="hydrafacial/">
+                  <h3>HydraFacials</h3>
+                  <p><span class="regular">$199</span></p>
+                  <strong>Grand Opening Special: $149</strong>
+                </a>
+                <a class="skin-service-box" href="dermaplaning-facial/">
+                  <h3>Dermaplaning</h3>
+                  <p><span class="regular">Regular $150</span></p>
+                  <strong>Grand Opening Special: $125</strong>
+                </a>
+                <a class="skin-service-box" href="microneedling-northern-virginia/">
+                  <h3>Microneedling SkinPen, NO RF</h3>
+                  <p><span class="regular">Regular $300</span></p>
+                  <strong>Grand Opening Special: $179</strong>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="compact-category-section" id="cat-03">
+            <div class="compact-category-visual">
+              <div class="compact-video-box">
+      <video autoplay muted loop playsinline preload="auto" aria-label="Beauty enhancements video">
+        <source src="../images/price-lash-tint.mp4" type="video/mp4">
+      </video>
+    </div>
+            </div>
+            <div class="compact-category-content">
+              <div class="compact-category-title">
+                <div>
+                  <h2>Beauty Enhancements</h2>
+                  <p class="beauty-refined-line">Beauty enhancement services are simple finishing treatments that help define brows, lashes, and facial grooming with a polished natural look.</p>
+                </div>
+              </div>
+
+              <div class="beauty-box-grid">
+                <a class="beauty-service-box" href="facial-cosmetology/#waxing">
+                  <h3>Waxing</h3>
+                  <p>Price based on consultation</p>
+                </a>
+                <a class="beauty-service-box" href="facial-cosmetology/#brow-lash-tints">
+                  <h3>Lash Tints</h3>
+                  <p>Price based on consultation</p>
+                </a>
+                <a class="beauty-service-box" href="facial-cosmetology/#brow-lash-tints">
+                  <h3>Brow and Lash Tints</h3>
+                  <p>Price based on consultation</p>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="compact-category-section" id="cat-04" onclick="window.location.href='triton-laser/'" onkeydown="if(event.key==='Enter'||event.key===' '){window.location.href='triton-laser/';}" role="link" tabindex="0" style="cursor:pointer;">
+            <div class="compact-category-visual">
+              <div class="compact-video-box" style="cursor:pointer;" onclick="window.location.href='triton-laser/'" role="link" tabindex="0">
+      <video autoplay muted loop playsinline preload="auto" aria-label="Triton laser hair removal video">
+        <source src="../images/price-laser.mp4" type="video/mp4">
+      </video>
+    </div>
+            </div>
+            <div class="compact-category-content">
+              <div class="compact-category-title laser-title">
+                <div>
+                  <h2>Triton Laser</h2>
+                  <p class="laser-refined-line">Advanced laser hair removal treatment options for long-term hair reduction.</p>
+                </div>
+              </div>
+
+              <div class="laser-service-box" style="cursor:pointer;">
+                <h3>Triton Laser Hair Removal</h3>
+                <p>At INFUDERM, Triton Laser Hair Removal is designed to reduce unwanted hair with a personalized, safety-focused approach for both men and women.</p>
+                <p>Whether you are treating small facial areas or larger body areas, your treatment plan is customized based on your skin type, hair type, treatment area, goals, and provider evaluation.</p>
+                <div class="laser-price-line">
+                  <strong>Triton Laser Hair Removal: 50% OFF</strong>
+                  <span>Final Pricing by Consultation</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+<div class="compact-final-note">
+      Pricing and promotional offers may vary based on consultation, treatment area, eligibility, and provider recommendation. Photo or video placeholders can be replaced once final category media is provided.
+    </div>
+  </div>
+</section>
+</main>
+</body>
+</html>
