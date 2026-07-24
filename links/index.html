@@ -130,10 +130,102 @@ h1{
     color:#999999;
     font-size:14px;
 }
+/* ===== Running Announcement Banner ===== */
+
+:root{
+    --banner-height:42px;
+}
+
+body{
+    padding-top:calc(40px + var(--banner-height));
+}
+
+.top-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    overflow:hidden;
+    white-space:nowrap;
+    height:var(--banner-height);
+    display:flex;
+    align-items:center;
+    background:linear-gradient(90deg,#0d0f14,#1a1410,#0d0f14);
+    border-bottom:1px solid rgba(240,217,144,.35);
+    color:#f0d990;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    box-shadow:0 6px 18px rgba(0,0,0,.3);
+}
+
+.running-track{
+    display:inline-flex;
+    min-width:max-content;
+    animation:marquee 22s linear infinite;
+}
+
+.running-track span{
+    display:inline-flex;
+    align-items:center;
+    padding:0 36px;
+    font-size:.9rem;
+}
+
+.running-track span::after{
+    content:"◆";
+    margin-left:36px;
+    color:#d4af5a;
+    font-size:.7rem;
+}
+
+@keyframes marquee{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@media (max-width:640px){
+
+    :root{
+        --banner-height:38px;
+    }
+
+    body{
+        padding-top:calc(30px + var(--banner-height));
+    }
+
+    .running-track span{
+        font-size:.78rem;
+        padding:0 22px;
+    }
+
+    .running-track span::after{
+        margin-left:22px;
+    }
+}
 </style>
 </head>
 
 <body>
+<div class="top-bar" aria-label="Grand Opening Special">
+    <div class="running-track">
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+
+        <!-- duplicate for seamless scrolling -->
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+        <span>GRAND OPENING • 50% OFF SELECTED SERVICES</span>
+    </div>
+</div>
 
 <div class="container">
 
