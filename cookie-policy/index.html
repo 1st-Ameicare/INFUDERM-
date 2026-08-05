@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy | INFUDERM Clinic</title>
+  <meta name="description" content="Cookie Policy for INFUDERM Clinic.">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+
+.policy-hero{
+  position:relative;
+  overflow:hidden;
+  padding:82px 0 72px;
+  border-bottom:1px solid rgba(196,154,69,.26);
+  background:
+    radial-gradient(circle at 82% 18%,rgba(196,154,69,.20),transparent 32%),
+    linear-gradient(135deg,#0b0a08 0%,#15120f 52%,#070604 100%);
+}
+.policy-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(196,154,69,.05),transparent 38%,rgba(196,154,69,.08));
+  pointer-events:none;
+}
+.policy-hero-inner{
+  width:min(1180px,calc(100% - 36px));
+  margin:0 auto;
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 330px;
+  gap:38px;
+  align-items:end;
+}
+.policy-eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  font-family:'IBM Plex Mono',monospace;
+  color:#f1d58a;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:12px;
+  margin-bottom:18px;
+}
+.policy-eyebrow::before{
+  content:"";
+  width:32px;
+  height:1px;
+  background:#c49a45;
+}
+.policy-hero h1{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:clamp(3rem,6vw,5.4rem);
+  line-height:.98;
+  margin:0 0 18px;
+  color:#f8f1e7;
+}
+.policy-effective{
+  color:#f1d58a;
+  font-family:'IBM Plex Mono',monospace;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:.86rem;
+  font-weight:900;
+  margin:0;
+}
+.policy-hero-card{
+  border:1px solid rgba(196,154,69,.32);
+  border-radius:28px;
+  background:linear-gradient(180deg,rgba(43,37,30,.96),rgba(24,21,17,.96));
+  box-shadow:0 28px 80px rgba(0,0,0,.42);
+  padding:28px;
+}
+.policy-hero-card strong{
+  display:block;
+  color:#f1d58a;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.78rem;
+  margin-bottom:12px;
+}
+.policy-hero-card p{
+  color:rgba(248,241,231,.76);
+  line-height:1.62;
+  margin:0 0 18px;
+  font-size:.96rem;
+}
+.policy-section{
+  padding:70px 0 86px;
+  background:linear-gradient(180deg,#0b0a08,#11100d);
+}
+.policy-layout{
+  width:min(1180px,calc(100% - 36px));
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:270px minmax(0,1fr);
+  gap:34px;
+  align-items:start;
+}
+.policy-side-card{
+  position:sticky;
+  top:150px;
+  border:1px solid rgba(196,154,69,.28);
+  border-radius:26px;
+  background:linear-gradient(180deg,rgba(34,28,22,.94),rgba(16,14,11,.96));
+  padding:24px;
+  box-shadow:0 20px 60px rgba(0,0,0,.28);
+}
+.policy-side-card h2{
+  font-size:1.45rem;
+  margin:0 0 12px;
+  color:#f8f1e7;
+}
+.policy-side-card p{
+  margin:0 0 20px;
+  color:rgba(248,241,231,.72);
+  line-height:1.62;
+  font-size:.94rem;
+}
+.policy-side-links{
+  display:grid;
+  gap:10px;
+}
+.policy-side-links a{
+  color:#f1d58a;
+  border:1px solid rgba(196,154,69,.26);
+  border-radius:999px;
+  padding:10px 13px;
+  font-size:.82rem;
+  font-weight:900;
+  text-align:center;
+}
+.policy-card-wrap{
+  display:grid;
+  gap:16px;
+}
+.policy-card{
+  border:1px solid rgba(196,154,69,.26);
+  border-radius:24px;
+  background:linear-gradient(180deg,rgba(34,28,22,.94),rgba(18,15,12,.96));
+  box-shadow:0 18px 50px rgba(0,0,0,.25);
+  padding:26px 28px;
+}
+.policy-card h2{
+  color:#f1d58a;
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:1.55rem;
+  line-height:1.2;
+  margin:0 0 12px;
+}
+.policy-card p{
+  color:rgba(248,241,231,.78);
+  line-height:1.75;
+  margin:0 0 12px;
+}
+.policy-card p:last-child{
+  margin-bottom:0;
+}
+.policy-card ul{
+  margin:8px 0 12px;
+  padding-left:22px;
+  color:rgba(248,241,231,.78);
+  line-height:1.75;
+  display:grid;
+  gap:4px;
+}
+.policy-contact-lines{
+  display:grid;
+  gap:8px;
+  color:rgba(248,241,231,.78);
+  line-height:1.7;
+}
+.policy-contact-lines a{
+  color:#f1d58a;
+}
+@media(max-width:980px){
+  .policy-hero-inner,
+  .policy-layout{
+    grid-template-columns:1fr;
+  }
+  .policy-side-card{
+    position:relative;
+    top:auto;
+  }
+}
+@media(max-width:640px){
+  .policy-hero{
+    padding:62px 0 54px;
+  }
+  .policy-card{
+    padding:22px 20px;
+  }
+}
+
+
+/* Site-wide running banner */
+:root{
+  --infuderm-banner-height:42px;
+  --infuderm-header-height:82px;
+}
+body{
+  padding-top:calc(var(--infuderm-banner-height) + var(--infuderm-header-height)) !important;
+}
+.top-bar.infuderm-running-banner{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100001 !important;
+  height:var(--infuderm-banner-height) !important;
+  overflow:hidden !important;
+  white-space:nowrap !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  border-bottom:1px solid rgba(240,217,144,.35) !important;
+  background:linear-gradient(90deg,#0d0f14,#1a1410,#0d0f14) !important;
+  color:#f0d990 !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  box-shadow:0 6px 22px rgba(0,0,0,.22) !important;
+}
+.infuderm-running-track{
+  display:inline-flex !important;
+  align-items:center !important;
+  min-width:max-content !important;
+  animation:infudermMarquee 22s linear infinite !important;
+}
+.infuderm-running-track span{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:0 36px !important;
+  font-size:.92rem !important;
+}
+.infuderm-running-track span::after{
+  content:"◆";
+  color:#d4af5a;
+  margin-left:36px;
+  font-size:.7rem;
+}
+@keyframes infudermMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+body > header{
+  position:fixed !important;
+  top:var(--infuderm-banner-height) !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100000 !important;
+  min-height:var(--infuderm-header-height) !important;
+  background:rgba(8,9,12,.94) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(212,175,90,.22);
+}
+body > header .nav{
+  min-height:var(--infuderm-header-height) !important;
+  align-items:center !important;
+}
+@media(max-width:640px){
+  :root{
+    --infuderm-banner-height:38px;
+    --infuderm-header-height:76px;
+  }
+  .infuderm-running-track span{
+    font-size:.78rem !important;
+    padding:0 24px !important;
+  }
+  .infuderm-running-track span::after{margin-left:24px;}
+}
+
+
+/* INFUDERM footer - site-wide */
+.infuderm-footer{
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(90deg, #070604 0%, #06080d 33%, #0b0906 62%, #171108 100%);
+  border-top: 1px solid rgba(194,150,62,.18);
+  color:#efe8db;
+  padding: 38px 0 14px;
+}
+.infuderm-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(205,161,70,.17) 0%, rgba(205,161,70,0) 30%),
+    linear-gradient(90deg, rgba(205,161,70,.03) 0%, rgba(205,161,70,0) 28%, rgba(205,161,70,.05) 76%, rgba(205,161,70,.1) 100%);
+  pointer-events:none;
+}
+.infuderm-footer-inner{
+  position:relative;
+  z-index:1;
+  width:min(1280px, calc(100% - 88px));
+  margin:0 auto;
+}
+.infuderm-footer-grid{
+  display:grid;
+  grid-template-columns: 300px 210px 235px 160px 190px;
+  column-gap:44px;
+  row-gap:32px;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.infuderm-footer-brand,.infuderm-footer-col{text-align:left;justify-self:start;align-self:start;}
+.infuderm-footer-brand img{
+  width:150px;
+  height:100px;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+  margin:0 0 20px 0;
+}
+.infuderm-footer-brand p{
+  max-width:290px;
+  margin:0 0 18px;
+  color:rgba(245,239,228,.95);
+  font-size:16px;
+  line-height:1.48;
+}
+.infuderm-footer-contact{display:grid;gap:11px;margin:0 0 24px;justify-items:start;align-items:start;text-align:left;}
+.infuderm-footer-contact-row{display:flex;align-items:center;justify-content:flex-start;gap:13px;color:#efe8db;font-size:16px;line-height:1.35;text-align:left;}
+.infuderm-footer-contact-row a{color:#efe8db;}
+.infuderm-footer-contact-row svg{width:16px;height:16px;flex:0 0 16px;stroke:#d4ad58;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.infuderm-footer-follow{margin:0 0 14px;color:#f0c96b;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:800;text-align:left;}
+.infuderm-footer-social{display:flex;gap:10px;justify-content:flex-start;}
+.infuderm-footer-social a{width:37px;height:37px;border-radius:50%;border:1px solid rgba(202,159,69,.75);display:inline-flex;align-items:center;justify-content:center;color:#efe8db;background:rgba(255,255,255,.01);}
+.infuderm-footer-social a svg{width:16px;height:16px;fill:currentColor;}
+.infuderm-footer-social a:hover,.infuderm-footer-col a:hover,.infuderm-footer-contact-row a:hover{color:#f0c96b;}
+.infuderm-footer-col h3{margin:8px 0 24px;color:#f0c96b;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:800;text-align:left;}
+.infuderm-footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:13px;justify-items:start;text-align:left;}
+.infuderm-footer-col li{text-align:left;width:100%;}
+.infuderm-footer-col a{color:#efe8db;font-size:16px;line-height:1.2;text-align:left;}
+.infuderm-footer-link-arrow{display:flex;align-items:center;justify-content:flex-start;gap:16px;width:100%;}
+.infuderm-footer-link-arrow .arrow{color:#d4ad58;font-size:17px;line-height:1;margin-left:auto;}
+.infuderm-footer-link-strong a{color:#f0c96b;font-weight:700;}
+.infuderm-footer-bottom{margin-top:32px;padding:18px 16px 0;border-top:1px solid rgba(194,150,62,.2);display:flex;justify-content:space-between;align-items:center;gap:20px;color:rgba(245,239,228,.9);font-size:15px;}
+.infuderm-footer-bottom-right{font-weight:500;}
+@media (max-width:1220px){.infuderm-footer-grid{grid-template-columns:1.15fr 1fr 1fr;}}
+@media (max-width:860px){.infuderm-footer-inner{width:min(100% - 36px, 1280px);}.infuderm-footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.infuderm-footer{padding:34px 0 14px;}.infuderm-footer-grid{grid-template-columns:1fr;gap:28px;}.infuderm-footer-brand p{font-size:16px;}.infuderm-footer-col a,.infuderm-footer-contact-row{font-size:15px;}.infuderm-footer-bottom{flex-direction:column;align-items:flex-start;padding-left:0;padding-right:0;}}
+
+  </style>
+</head>
+<body>
+
+<div class="top-bar infuderm-running-banner" aria-label="August special offer">
+  <div class="infuderm-running-track">
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+  </div>
+</div>
+
+<header><nav class="nav">
+  <a href="../"><img class="logo" src="../images/logo.png" alt="INFUDERM Logo"></a>
+  <div class="nav-links">
+    <a href="../about/">About</a>
+    <a href="../services/">Price &amp; Treatment</a>
+    <a href="../special-packages/">Packages</a>
+    <a href="../team/">Meet Our Team</a>
+    <a href="../contact/">Contact Us</a>
+  </div>
+  <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Free Consultation</a>
+</nav></header>
+
+<main>
+<section class="policy-hero">
+  <div class="policy-hero-inner">
+    <div>
+      <div class="policy-eyebrow">INFUDERM Clinic</div>
+      <h1>Cookie Policy</h1>
+      <p class="policy-effective">Effective Date: 29th June, 2026</p>
+    </div>
+    <aside class="policy-hero-card">
+      <strong>Policy Information</strong>
+      <p>Please review the information below. If you have questions, please contact INFUDERM Clinic.</p>
+      <a class="btn" href="../contact/">Contact Us</a>
+    </aside>
+  </div>
+</section>
+
+<section class="policy-section">
+  <div class="policy-layout">
+    <aside class="policy-side-card">
+      <h2>Policy Sections</h2>
+      <p>Review the full policy details below.</p>
+      <div class="policy-side-links">
+        <a href="../patient-resources/">FAQs</a>
+        <a href="../appointment-cancellation-policy/">Appointment Policy</a>
+        <a href="../contact/">Contact Us</a>
+      </div>
+    </aside>
+    <div class="policy-card-wrap">
+      
+      <article class="policy-card">
+        <h2>COOKIE POLICY – INFUDERM CLINIC</h2>
+        <p>This Cookie Policy explains how INFUDERM Clinic uses cookies and similar technologies on https://infudermva.com.</p>
+      </article>
+
+      <article class="policy-card">
+        <h2>WHAT ARE COOKIES</h2>
+        <p>Cookies are small text files stored on your device when you visit a website. They help websites function properly and improve user experience.</p>
+      </article>
+
+      <article class="policy-card">
+        <h2>HOW WE USE COOKIES</h2>
+        <p>We use cookies to:</p>
+<ul>
+<li>Improve website performance</li>
+<li>Understand visitor behavior</li>
+<li>Measure marketing effectiveness</li>
+<li>Personalize user experience</li>
+<li>Enable advertising features</li>
+</ul>
+      </article>
+
+      <article class="policy-card">
+        <h2>TYPES OF COOKIES WE USE</h2>
+        <p>Essential Cookies</p>
+<p>Required for basic website functionality.</p>
+<p>Analytics Cookies</p>
+<p>Used by tools such as Google Analytics to understand website traffic.</p>
+<p>Marketing Cookies</p>
+<p>Used by platforms such as Meta Pixel and Google Ads to show relevant advertisements.</p>
+      </article>
+
+      <article class="policy-card">
+        <h2>THIRD-PARTY COOKIES</h2>
+        <p>We may use third-party services that place cookies on your device, including:</p>
+<ul>
+<li>Google Analytics 4</li>
+<li>Google Ads</li>
+<li>Meta (Facebook &amp; Instagram)</li>
+<li>AestheticsPro</li>
+</ul>
+<p>These services may collect anonymous usage data.</p>
+      </article>
+
+      <article class="policy-card">
+        <h2>YOUR COOKIE CHOICES</h2>
+        <p>You can control or disable cookies through your browser settings.</p>
+<p>Please note that disabling cookies may affect website functionality.</p>
+      </article>
+
+      <article class="policy-card">
+        <h2>UPDATES TO THIS POLICY</h2>
+        <p>We may update this Cookie Policy from time to time. Changes will be posted on this page.</p>
+      </article>
+
+      <article class="policy-card">
+        <h2>CONTACT US</h2>
+        <p>INFUDERM Clinic</p>
+<p>Reston, VA &amp; Aldie, VA</p>
+<p>Email: <a href="mailto:Info@InfudermVA.com">Info@InfudermVA.com</a></p>
+<p>Phone: <a href="tel:+15713759180">(571) 375-9180</a></p>
+      </article>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="infuderm-footer">
+  <div class="infuderm-footer-inner">
+    <div class="infuderm-footer-grid">
+      <div class="infuderm-footer-brand">
+        <img src="../images/logo.png" alt="INFUDERM Clinic Logo">
+        <p>Personalized medical aesthetics, wellness, and skincare treatments designed to help you look and feel your best.</p>
+        <div class="infuderm-footer-contact">
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><span>Reston</span></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><span>Aldie</span></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.35 1.8.68 2.66a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.42-1.25a2 2 0 0 1 2.11-.45c.86.33 1.75.56 2.66.68A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+15713759180">(571) 375-9180</a></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg><a href="mailto:Info@InfudermVA.com">Info@InfudermVA.com</a></div>
+        </div>
+        <div class="infuderm-footer-follow">FOLLOW US</div>
+        <div class="infuderm-footer-social" aria-label="INFUDERM social media links">
+          <a href="https://www.instagram.com/infudermclinic/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm11.2 1.55a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z"/></svg></a>
+          <a href="https://www.facebook.com/infudermclinic" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.75l.41-3.2H13.5V8.57c0-.93.26-1.56 1.59-1.56h1.7V4.15c-.3-.04-1.31-.13-2.49-.13-2.47 0-4.16 1.5-4.16 4.26v2.38H7.35v3.2h2.79V22h3.36Z"/></svg></a>
+          <a href="https://www.linkedin.com/company/infuderm-aesthetic-clinic" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5A1.94 1.94 0 1 1 7 4.62 1.94 1.94 0 0 1 6.94 8.5ZM5.4 9.9H8.5V20H5.4V9.9Zm5.03 0h2.98v1.38h.04c.42-.79 1.43-1.63 2.94-1.63 3.15 0 3.73 2.07 3.73 4.75V20h-3.1v-4.94c0-1.18-.02-2.7-1.64-2.7-1.65 0-1.9 1.28-1.9 2.61V20h-3.05V9.9Z"/></svg></a>
+          <a href="https://www.tiktok.com/@infudermclinic" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.96 3c.27 2.18 1.5 3.84 3.65 4.28v2.31a6.33 6.33 0 0 1-3.43-1.06v6.6c0 3.29-2.48 5.62-5.69 5.62A5.5 5.5 0 0 1 4 15.25c0-3.16 2.61-5.63 5.98-5.39v2.36c-1.9-.26-3.53 1-3.53 2.94 0 1.75 1.3 3.05 3.02 3.05 1.63 0 2.76-1.06 2.76-3.3V3h2.73Z"/></svg></a>
+        </div>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>TREATMENTS</h3>
+        <ul>
+          <li><a class="infuderm-footer-link-arrow" href="../services/hydrafacial/"><span>HydraFacial</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/dermaplaning-facial/"><span>Dermaplaning Facial</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/microneedling-northern-virginia/"><span>Microneedling</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/morpheus8/"><span>Morpheus8</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/prp-prf/"><span>PRP/PRF Therapy</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/iv-therapy-wellness-injections-northern-virginia/"><span>IV Therapy</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/medical-weight-loss-glp-1-injections-northern-virginia/"><span>Medical Weight Loss</span><span class="arrow">›</span></a></li>
+          <li class="infuderm-footer-link-strong"><a class="infuderm-footer-link-arrow" href="../services/"><span>View All Services</span><span class="arrow">›</span></a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>PATIENT RESOURCES</h3>
+        <ul>
+          <li><a href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Consultation</a></li>
+          <li><a href="https://www.myaestheticspro.com/portal/index.cfm?25461261CFB4C61629932C2D2C1E1EC0FBC66F7FCA968DDF12B85466368C5E81" target="_blank" rel="noopener">Patient Portal</a></li>
+          <li><a href="../patient-resources/">FAQ</a></li>
+          <li><a href="../appointment-cancellation-policy/">Appointment &amp; Cancellation Policy</a></li>
+          <li><a href="../contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="../about/">About INFUDERM</a></li>
+          <li><a href="../team/">Meet Our Team</a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>LEGAL</h3>
+        <ul>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          <li><a href="../website-disclaimer/">Website Disclaimer</a></li>
+          <li><a href="../hipaa/">HIPAA</a></li>
+          <li><a href="../accessibility-statement/">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="infuderm-footer-bottom">
+      <span>© 2026 INFUDERM Clinic. All rights reserved.</span>
+      <span class="infuderm-footer-bottom-right">Medical Precision. Absolute Safety.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

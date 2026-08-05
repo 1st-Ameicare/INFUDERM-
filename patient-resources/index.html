@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | INFUDERM Clinic</title>
+  <meta name="description" content="Frequently asked questions about INFUDERM Clinic services, locations, consultations, treatments, and scheduling.">
+  <link rel="icon" href="../images/logo.png">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .faq-premium-hero{
+      position:relative;
+      overflow:hidden;
+      padding:82px 0 72px;
+      border-bottom:1px solid rgba(196,154,69,.26);
+      background:
+        radial-gradient(circle at 82% 18%,rgba(196,154,69,.20),transparent 32%),
+        linear-gradient(135deg,#0b0a08 0%,#15120f 52%,#070604 100%);
+    }
+    .faq-premium-hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(196,154,69,.05),transparent 38%,rgba(196,154,69,.08));
+      pointer-events:none;
+    }
+    .faq-hero-inner{
+      width:min(1180px,calc(100% - 36px));
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 330px;
+      gap:38px;
+      align-items:end;
+    }
+    .faq-eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      font-family:'IBM Plex Mono',monospace;
+      color:#f1d58a;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      font-size:12px;
+      margin-bottom:18px;
+    }
+    .faq-eyebrow::before{
+      content:"";
+      width:32px;
+      height:1px;
+      background:#c49a45;
+    }
+    .faq-premium-hero h1{
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:clamp(3rem,6vw,5.8rem);
+      line-height:.98;
+      margin:0 0 18px;
+      color:#f8f1e7;
+    }
+    .faq-hero-copy p{
+      color:#dfd1bf;
+      font-size:1.08rem;
+      line-height:1.72;
+      max-width:700px;
+      margin:0;
+    }
+    .faq-hero-card{
+      border:1px solid rgba(196,154,69,.32);
+      border-radius:28px;
+      background:linear-gradient(180deg,rgba(43,37,30,.96),rgba(24,21,17,.96));
+      box-shadow:0 28px 80px rgba(0,0,0,.42);
+      padding:28px;
+    }
+    .faq-hero-card strong{
+      display:block;
+      color:#f1d58a;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.78rem;
+      margin-bottom:12px;
+    }
+    .faq-hero-card p{
+      color:rgba(248,241,231,.76);
+      line-height:1.62;
+      margin:0 0 18px;
+      font-size:.96rem;
+    }
+    .faq-layout{
+      padding:70px 0 86px;
+      background:
+        linear-gradient(180deg,#0b0a08,#11100d);
+    }
+    .faq-layout-inner{
+      width:min(1180px,calc(100% - 36px));
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:270px minmax(0,1fr);
+      gap:34px;
+      align-items:start;
+    }
+    .faq-side-card{
+      position:sticky;
+      top:150px;
+      border:1px solid rgba(196,154,69,.28);
+      border-radius:26px;
+      background:linear-gradient(180deg,rgba(34,28,22,.94),rgba(16,14,11,.96));
+      padding:24px;
+      box-shadow:0 20px 60px rgba(0,0,0,.28);
+    }
+    .faq-side-card h2{
+      font-size:1.45rem;
+      margin:0 0 12px;
+      color:#f8f1e7;
+    }
+    .faq-side-card p{
+      margin:0 0 20px;
+      color:rgba(248,241,231,.72);
+      line-height:1.62;
+      font-size:.94rem;
+    }
+    .faq-side-links{
+      display:grid;
+      gap:10px;
+    }
+    .faq-side-links a{
+      color:#f1d58a;
+      border:1px solid rgba(196,154,69,.26);
+      border-radius:999px;
+      padding:10px 13px;
+      font-size:.82rem;
+      font-weight:900;
+      text-align:center;
+    }
+    .faq-accordion-wrap{
+      display:grid;
+      gap:14px;
+    }
+    .faq-accordion-card{
+      border:1px solid rgba(196,154,69,.26);
+      border-radius:22px;
+      background:linear-gradient(180deg,rgba(34,28,22,.94),rgba(18,15,12,.96));
+      box-shadow:0 18px 50px rgba(0,0,0,.25);
+      overflow:hidden;
+    }
+    .faq-accordion-card summary{
+      list-style:none;
+      cursor:pointer;
+      display:grid;
+      grid-template-columns:46px minmax(0,1fr) 36px;
+      gap:16px;
+      align-items:center;
+      padding:22px 24px;
+      color:#f8f1e7;
+    }
+    .faq-accordion-card summary::-webkit-details-marker{
+      display:none;
+    }
+    .faq-number{
+      color:#c49a45;
+      font-family:'IBM Plex Mono',monospace;
+      font-size:.8rem;
+      letter-spacing:.08em;
+      font-weight:900;
+    }
+    .faq-question-text{
+      color:#f8f1e7;
+      font-family:Georgia,'Times New Roman',serif;
+      font-size:1.22rem;
+      line-height:1.28;
+    }
+    .faq-toggle{
+      width:34px;
+      height:34px;
+      border-radius:999px;
+      border:1px solid rgba(196,154,69,.34);
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#f1d58a;
+      font-size:1.25rem;
+      line-height:1;
+      transition:.2s ease;
+    }
+    .faq-accordion-card[open] .faq-toggle{
+      transform:rotate(45deg);
+      background:rgba(196,154,69,.12);
+    }
+    .faq-panel{
+      padding:0 24px 24px 86px;
+      color:rgba(248,241,231,.76);
+      line-height:1.72;
+      border-top:1px solid rgba(196,154,69,.16);
+      margin-top:-2px;
+    }
+    .faq-panel p{
+      margin:16px 0 0;
+      color:rgba(248,241,231,.76);
+    }
+    .faq-answer-list{
+      margin:16px 0 0;
+      padding-left:22px;
+      color:rgba(248,241,231,.76);
+      display:grid;
+      gap:6px;
+    }
+    .faq-final-cta{
+      margin-top:20px;
+      border:1px solid rgba(196,154,69,.34);
+      border-radius:30px;
+      background:
+        radial-gradient(circle at 82% 0%,rgba(196,154,69,.18),transparent 35%),
+        linear-gradient(180deg,#211d18,#0f0d0b);
+      padding:38px 32px;
+      text-align:center;
+      box-shadow:0 28px 80px rgba(0,0,0,.34);
+    }
+    .faq-final-cta h2{
+      color:#f8f1e7;
+      font-size:clamp(2rem,4vw,3.1rem);
+      margin:0 0 14px;
+    }
+    .faq-final-cta p{
+      color:rgba(248,241,231,.78);
+      max-width:760px;
+      margin:0 auto 18px;
+      line-height:1.72;
+    }
+    .faq-cta-lines{
+      display:grid;
+      gap:7px;
+      color:#f1d58a;
+      font-weight:900;
+      margin:18px 0 24px;
+    }
+    @media(max-width:980px){
+      .faq-hero-inner,
+      .faq-layout-inner{
+        grid-template-columns:1fr;
+      }
+      .faq-side-card{
+        position:relative;
+        top:auto;
+      }
+    }
+    @media(max-width:640px){
+      .faq-premium-hero{
+        padding:62px 0 54px;
+      }
+      .faq-accordion-card summary{
+        grid-template-columns:1fr 34px;
+        padding:20px;
+      }
+      .faq-number{
+        display:none;
+      }
+      .faq-question-text{
+        font-size:1.08rem;
+      }
+      .faq-panel{
+        padding:0 20px 20px;
+      }
+      .faq-final-cta{
+        padding:30px 20px;
+      }
+    }
+  
+/* INFUDERM footer - site-wide */
+.infuderm-footer{
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(90deg, #070604 0%, #06080d 33%, #0b0906 62%, #171108 100%);
+  border-top: 1px solid rgba(194,150,62,.18);
+  color:#efe8db;
+  padding: 38px 0 14px;
+}
+.infuderm-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(205,161,70,.17) 0%, rgba(205,161,70,0) 30%),
+    linear-gradient(90deg, rgba(205,161,70,.03) 0%, rgba(205,161,70,0) 28%, rgba(205,161,70,.05) 76%, rgba(205,161,70,.1) 100%);
+  pointer-events:none;
+}
+.infuderm-footer-inner{
+  position:relative;
+  z-index:1;
+  width:min(1280px, calc(100% - 88px));
+  margin:0 auto;
+}
+.infuderm-footer-grid{
+  display:grid;
+  grid-template-columns: 300px 210px 235px 160px 190px;
+  column-gap:44px;
+  row-gap:32px;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.infuderm-footer-brand,.infuderm-footer-col{text-align:left;justify-self:start;align-self:start;}
+.infuderm-footer-brand img{
+  width:150px;
+  height:100px;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+  margin:0 0 20px 0;
+}
+.infuderm-footer-brand p{
+  max-width:290px;
+  margin:0 0 18px;
+  color:rgba(245,239,228,.95);
+  font-size:16px;
+  line-height:1.48;
+}
+.infuderm-footer-contact{display:grid;gap:11px;margin:0 0 24px;justify-items:start;align-items:start;text-align:left;}
+.infuderm-footer-contact-row{display:flex;align-items:center;justify-content:flex-start;gap:13px;color:#efe8db;font-size:16px;line-height:1.35;text-align:left;}
+.infuderm-footer-contact-row a{color:#efe8db;}
+.infuderm-footer-contact-row svg{width:16px;height:16px;flex:0 0 16px;stroke:#d4ad58;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.infuderm-footer-follow{margin:0 0 14px;color:#f0c96b;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:800;text-align:left;}
+.infuderm-footer-social{display:flex;gap:10px;justify-content:flex-start;}
+.infuderm-footer-social a{width:37px;height:37px;border-radius:50%;border:1px solid rgba(202,159,69,.75);display:inline-flex;align-items:center;justify-content:center;color:#efe8db;background:rgba(255,255,255,.01);}
+.infuderm-footer-social a svg{width:16px;height:16px;fill:currentColor;}
+.infuderm-footer-social a:hover,.infuderm-footer-col a:hover,.infuderm-footer-contact-row a:hover{color:#f0c96b;}
+.infuderm-footer-col h3{margin:8px 0 24px;color:#f0c96b;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:800;text-align:left;}
+.infuderm-footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:13px;justify-items:start;text-align:left;}
+.infuderm-footer-col li{text-align:left;width:100%;}
+.infuderm-footer-col a{color:#efe8db;font-size:16px;line-height:1.2;text-align:left;}
+.infuderm-footer-link-arrow{display:flex;align-items:center;justify-content:flex-start;gap:16px;width:100%;}
+.infuderm-footer-link-arrow .arrow{color:#d4ad58;font-size:17px;line-height:1;margin-left:auto;}
+.infuderm-footer-link-strong a{color:#f0c96b;font-weight:700;}
+.infuderm-footer-bottom{margin-top:32px;padding:18px 16px 0;border-top:1px solid rgba(194,150,62,.2);display:flex;justify-content:space-between;align-items:center;gap:20px;color:rgba(245,239,228,.9);font-size:15px;}
+.infuderm-footer-bottom-right{font-weight:500;}
+@media (max-width:1220px){.infuderm-footer-grid{grid-template-columns:1.15fr 1fr 1fr;}}
+@media (max-width:860px){.infuderm-footer-inner{width:min(100% - 36px, 1280px);}.infuderm-footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.infuderm-footer{padding:34px 0 14px;}.infuderm-footer-grid{grid-template-columns:1fr;gap:28px;}.infuderm-footer-brand p{font-size:16px;}.infuderm-footer-col a,.infuderm-footer-contact-row{font-size:15px;}.infuderm-footer-bottom{flex-direction:column;align-items:flex-start;padding-left:0;padding-right:0;}}
+
+
+/* Site-wide running banner */
+:root{
+  --infuderm-banner-height:42px;
+  --infuderm-header-height:82px;
+}
+body{
+  padding-top:calc(var(--infuderm-banner-height) + var(--infuderm-header-height)) !important;
+}
+.top-bar.infuderm-running-banner{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100001 !important;
+  height:var(--infuderm-banner-height) !important;
+  overflow:hidden !important;
+  white-space:nowrap !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  border-bottom:1px solid rgba(240,217,144,.35) !important;
+  background:linear-gradient(90deg,#0d0f14,#1a1410,#0d0f14) !important;
+  color:#f0d990 !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  box-shadow:0 6px 22px rgba(0,0,0,.22) !important;
+}
+.infuderm-running-track{
+  display:inline-flex !important;
+  align-items:center !important;
+  min-width:max-content !important;
+  animation:infudermMarquee 22s linear infinite !important;
+}
+.infuderm-running-track span{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:0 36px !important;
+  font-size:.92rem !important;
+}
+.infuderm-running-track span::after{
+  content:"◆";
+  color:#d4af5a;
+  margin-left:36px;
+  font-size:.7rem;
+}
+@keyframes infudermMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+body > header{
+  position:fixed !important;
+  top:var(--infuderm-banner-height) !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100000 !important;
+  min-height:var(--infuderm-header-height) !important;
+  background:rgba(8,9,12,.94) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(212,175,90,.22);
+}
+body > header .nav{
+  min-height:var(--infuderm-header-height) !important;
+  align-items:center !important;
+}
+@media(max-width:640px){
+  :root{
+    --infuderm-banner-height:38px;
+    --infuderm-header-height:76px;
+  }
+  .infuderm-running-track span{
+    font-size:.78rem !important;
+    padding:0 24px !important;
+  }
+  .infuderm-running-track span::after{margin-left:24px;}
+}
+
+</style>
+</head>
+<body>
+<div class="top-bar infuderm-running-banner" aria-label="August special offer">
+  <div class="infuderm-running-track">
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 1-15 ONLY</span>
+  </div>
+</div>
+<header><nav class="nav">
+  <a href="../"><img class="logo" src="../images/logo.png" alt="INFUDERM Logo"></a>
+  <div class="nav-links">
+    <a href="../about/">About</a>
+    <a href="../services/">Price &amp; Treatment</a>
+    <a href="../special-packages/">Packages</a>
+    <a href="../team/">Meet Our Team</a>
+    <a href="../contact/">Contact Us</a>
+  </div>
+  <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Free Consultation</a>
+</nav></header>
+
+<main>
+<section class="faq-premium-hero">
+  <div class="faq-hero-inner">
+    <div class="faq-hero-copy">
+      <div class="faq-eyebrow">INFUDERM Clinic</div>
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about INFUDERM Clinic services, locations, consultations, treatments, and scheduling.</p>
+    </div>
+    <aside class="faq-hero-card">
+      <strong>Need help choosing?</strong>
+      <p>Our providers can review your goals and recommend the most appropriate options during your consultation.</p>
+      <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Free Consultation</a>
+    </aside>
+  </div>
+</section>
+
+<section class="faq-layout">
+  <div class="faq-layout-inner">
+    <aside class="faq-side-card">
+      <h2>FAQ Topics</h2>
+      <p>Click any question to open the answer.</p>
+      <div class="faq-side-links">
+        <a href="../services/">View Pricing</a>
+        <a href="../special-packages/">View Packages</a>
+        <a href="../contact/">Contact Us</a>
+      </div>
+    </aside>
+
+    <div class="faq-accordion-wrap">
+      
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">01</span>
+          <span class="faq-question-text">What services does INFUDERM Clinic offer?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>INFUDERM Clinic offers personalized medical aesthetics and wellness treatments, including Botox®, dermal fillers, facial balancing, laser hair removal, microneedling, Morpheus8®, PRP/PRF, IV therapy, medical weight loss, facials, skin rejuvenation, and other advanced aesthetic services.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">02</span>
+          <span class="faq-question-text">Where is INFUDERM Clinic located?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>INFUDERM Clinic has two convenient locations in Northern Virginia:</p>
+<p>📍 Reston, VA</p>
+<p>📍 Aldie, VA</p>
+<p>We proudly serve patients throughout Loudoun County, Fairfax County, and nearby communities.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">03</span>
+          <span class="faq-question-text">Which areas do you serve?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Patients visit INFUDERM Clinic from Reston, Aldie, Ashburn, Herndon, Sterling, Chantilly, South Riding, Brambleton, Stone Ridge, Leesburg, Fairfax, Vienna, Great Falls, McLean, Tysons, and surrounding Northern Virginia communities.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">04</span>
+          <span class="faq-question-text">Why choose INFUDERM Clinic?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>INFUDERM Clinic focuses on personalized treatment plans, natural-looking results, advanced technology, and patient-centered care. Every consultation is tailored to your unique goals, facial anatomy, skin concerns, and overall wellness.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">05</span>
+          <span class="faq-question-text">Do you offer FREE consultations?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes. We offer complimentary consultations for many of our aesthetic and wellness treatments. During your consultation, our experienced providers will discuss your goals, answer your questions, and recommend a personalized treatment plan.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">06</span>
+          <span class="faq-question-text">Do I need a consultation before treatment?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes. Most treatments begin with a consultation to evaluate your concerns, medical history, and desired results. This helps ensure your treatment plan is both safe and personalized.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">07</span>
+          <span class="faq-question-text">Are treatments personalized?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Absolutely. No two patients are alike. Every treatment plan is customized based on your goals, facial structure, skin condition, and provider recommendations.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">08</span>
+          <span class="faq-question-text">Do you treat both women and men?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes. INFUDERM Clinic welcomes both women and men seeking aesthetic treatments, skin rejuvenation, wellness services, and medical weight loss.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">09</span>
+          <span class="faq-question-text">What aesthetic treatments are most popular?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Popular treatments include:</p>
+<ul class="faq-answer-list">
+<li>Botox®</li>
+<li>Dermal Fillers</li>
+<li>Facial Balancing</li>
+<li>Laser Hair Removal</li>
+<li>Microneedling</li>
+<li>Morpheus8®</li>
+<li>PRP &amp; PRF</li>
+<li>IV Therapy</li>
+<li>Medical Weight Loss</li>
+</ul>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">10</span>
+          <span class="faq-question-text">How do I know which treatment is right for me?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>The best treatment depends on your goals. During your consultation, our providers will evaluate your concerns and recommend the most appropriate options based on your individual needs.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">11</span>
+          <span class="faq-question-text">Do you offer financing or payment options?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Please contact INFUDERM Clinic to learn about current payment options and available financing programs, if applicable.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">12</span>
+          <span class="faq-question-text">How can I schedule an appointment?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Appointments can be scheduled online, by calling (571) 375-9180, by emailing info@infudermva.com, or by contacting our Reston or Aldie location directly.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">13</span>
+          <span class="faq-question-text">Are your treatments performed by qualified medical professionals?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes. Our treatments are performed by qualified medical professionals who prioritize patient safety, individualized care, and natural-looking results.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">14</span>
+          <span class="faq-question-text">What makes INFUDERM Clinic different from other medical spas &amp; aesthetic clinics?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>At INFUDERM Clinic, we believe aesthetic medicine should enhance your natural beauty—not change who you are. Our personalized approach, evidence-based treatments, and commitment to patient education help every patient make informed decisions with confidence.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">15</span>
+          <span class="faq-question-text">Do you offer treatments for all skin types?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes. Many of our treatments can be customized for different skin types and concerns. During your consultation, we&#x27;ll recommend the most suitable options based on your individual skin assessment.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">16</span>
+          <span class="faq-question-text">Is there parking available at your clinics?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes. Both our Reston and Aldie locations have convenient parking for patients.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">17</span>
+          <span class="faq-question-text">Which is the best medical spa near Reston, VA?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>If you&#x27;re looking for a medical spa near Reston, INFUDERM Clinic offers personalized aesthetic and wellness treatments, experienced medical providers, and complimentary consultations to help you choose the right treatment for your goals.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">18</span>
+          <span class="faq-question-text">Which is the best medical spa near Aldie, VA?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>INFUDERM Clinic proudly serves patients in Aldie and surrounding communities with personalized aesthetic treatments, advanced technology, and patient-focused care tailored to individual needs.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">19</span>
+          <span class="faq-question-text">What services does a medical spa provide?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Medical spas combine aesthetic treatments with medically supervised care. Common services include Botox®, dermal fillers, laser hair removal, skin rejuvenation, microneedling, IV therapy, and medical weight loss.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">20</span>
+          <span class="faq-question-text">Can I combine multiple treatments during one visit?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Many treatments can be combined safely depending on your goals and provider recommendations. During your consultation, we&#x27;ll discuss which combination treatments are appropriate for you.</p>
+        </div>
+      </details>
+    
+      <details class="faq-accordion-card">
+        <summary>
+          <span class="faq-number">21</span>
+          <span class="faq-question-text">Can I have my consultation and treatment on the same day?</span>
+          <span class="faq-toggle" aria-hidden="true">+</span>
+        </summary>
+        <div class="faq-panel">
+          <p>Yes, many patients can complete both their consultation and treatment during the same visit, depending on the treatment, provider availability, and medical assessment. Please let us know when booking if you would like to be considered for a same-day treatment.</p>
+        </div>
+      </details>
+    
+
+      <div class="faq-final-cta">
+        <h2>Ready to Begin Your Aesthetic Journey?</h2>
+        <p>Whether you're considering Botox®, dermal fillers, facial balancing, laser hair removal, skin rejuvenation, IV therapy, or medical weight loss, the team at INFUDERM Clinic is here to help you achieve natural-looking results through personalized care.</p>
+        <div class="faq-cta-lines">
+          <span>📞 Call: (571) 375-9180</span>
+          <span>📍 Locations: Reston, VA &amp; Aldie, VA</span>
+        </div>
+        <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Your FREE Consultation Today</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="infuderm-footer">
+  <div class="infuderm-footer-inner">
+    <div class="infuderm-footer-grid">
+      <div class="infuderm-footer-brand">
+        <img src="../images/logo.png" alt="INFUDERM Clinic Logo">
+        <p>Personalized medical aesthetics, wellness, and skincare treatments designed to help you look and feel your best.</p>
+        <div class="infuderm-footer-contact">
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><span>Reston</span></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><span>Aldie</span></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.35 1.8.68 2.66a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.42-1.25a2 2 0 0 1 2.11-.45c.86.33 1.75.56 2.66.68A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+15713759180">(571) 375-9180</a></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg><a href="mailto:Info@InfudermVA.com">Info@InfudermVA.com</a></div>
+        </div>
+        <div class="infuderm-footer-follow">FOLLOW US</div>
+        <div class="infuderm-footer-social" aria-label="INFUDERM social media links">
+          <a href="https://www.instagram.com/infudermclinic/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm11.2 1.55a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z"/></svg></a>
+          <a href="https://www.facebook.com/infudermclinic" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.75l.41-3.2H13.5V8.57c0-.93.26-1.56 1.59-1.56h1.7V4.15c-.3-.04-1.31-.13-2.49-.13-2.47 0-4.16 1.5-4.16 4.26v2.38H7.35v3.2h2.79V22h3.36Z"/></svg></a>
+          <a href="https://www.linkedin.com/company/infuderm-aesthetic-clinic" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5A1.94 1.94 0 1 1 7 4.62 1.94 1.94 0 0 1 6.94 8.5ZM5.4 9.9H8.5V20H5.4V9.9Zm5.03 0h2.98v1.38h.04c.42-.79 1.43-1.63 2.94-1.63 3.15 0 3.73 2.07 3.73 4.75V20h-3.1v-4.94c0-1.18-.02-2.7-1.64-2.7-1.65 0-1.9 1.28-1.9 2.61V20h-3.05V9.9Z"/></svg></a>
+          <a href="https://www.tiktok.com/@infudermclinic" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.96 3c.27 2.18 1.5 3.84 3.65 4.28v2.31a6.33 6.33 0 0 1-3.43-1.06v6.6c0 3.29-2.48 5.62-5.69 5.62A5.5 5.5 0 0 1 4 15.25c0-3.16 2.61-5.63 5.98-5.39v2.36c-1.9-.26-3.53 1-3.53 2.94 0 1.75 1.3 3.05 3.02 3.05 1.63 0 2.76-1.06 2.76-3.3V3h2.73Z"/></svg></a>
+        </div>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>TREATMENTS</h3>
+        <ul>
+          <li><a class="infuderm-footer-link-arrow" href="../services/hydrafacial/"><span>HydraFacial</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/dermaplaning-facial/"><span>Dermaplaning Facial</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/microneedling-northern-virginia/"><span>Microneedling</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/morpheus8/"><span>Morpheus8</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/prp-prf/"><span>PRP/PRF Therapy</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/iv-therapy-wellness-injections-northern-virginia/"><span>IV Therapy</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/medical-weight-loss-glp-1-injections-northern-virginia/"><span>Medical Weight Loss</span><span class="arrow">›</span></a></li>
+          <li class="infuderm-footer-link-strong"><a class="infuderm-footer-link-arrow" href="../services/"><span>View All Services</span><span class="arrow">›</span></a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>PATIENT RESOURCES</h3>
+        <ul>
+          <li><a href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Consultation</a></li>
+          <li><a href="https://www.myaestheticspro.com/portal/index.cfm?25461261CFB4C61629932C2D2C1E1EC0FBC66F7FCA968DDF12B85466368C5E81" target="_blank" rel="noopener">Patient Portal</a></li>
+          <li><a href="../patient-resources/">FAQ</a></li>
+          <li><a href="../appointment-cancellation-policy/">Appointment &amp; Cancellation Policy</a></li>
+          <li><a href="../contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="../about/">About INFUDERM</a></li>
+          <li><a href="../team/">Meet Our Team</a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>LEGAL</h3>
+        <ul>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          <li><a href="../website-disclaimer/">Website Disclaimer</a></li>
+          <li><a href="../hipaa/">HIPAA</a></li>
+          <li><a href="../accessibility-statement/">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="infuderm-footer-bottom">
+      <span>© 2026 INFUDERM Clinic. All rights reserved.</span>
+      <span class="infuderm-footer-bottom-right">Medical Precision. Absolute Safety.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
