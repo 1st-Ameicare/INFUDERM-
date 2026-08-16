@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packages | INFUDERM Clinic</title>
+<meta name="description" content="INFUDERM Clinic package pricing for HydraFacial, IV wellness, laser hair removal, microneedling, Morpheus8, PRF / EZ Gel, PRP, and add-ons.">
+<link rel="icon" href="../images/logo.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  .nav-links a[href="./"]{color:var(--gold-light);}
+  .pkg-page{background:var(--black); color:var(--cream);}
+  .pkg-hero{
+    position:relative; overflow:hidden;
+    border-bottom:1px solid var(--border);
+    background:radial-gradient(circle at 78% 18%,rgba(196,154,69,.17),transparent 36%),linear-gradient(135deg,#0b0a08 0%,#15120f 52%,#070604 100%);
+  }
+  .pkg-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 18%,rgba(196,154,69,.16),transparent 30%);pointer-events:none;}
+  .pkg-hero-inner{max-width:1200px;margin:0 auto;padding:74px 24px 72px;position:relative;z-index:1;}
+  .pkg-eyebrow{display:inline-flex;align-items:center;gap:12px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:18px;}
+  .pkg-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);}
+  .pkg-title{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.75rem,5vw,4.7rem);line-height:1.03;letter-spacing:-.02em;margin:0 0 16px;color:var(--cream);}
+  .pkg-sub{max-width:680px;font-size:1.08rem;line-height:1.72;color:var(--soft);margin:0 0 28px;}
+  .pkg-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .pkg-main{max-width:1200px;margin:0 auto;padding:28px 24px 84px;}
+  .pkg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:18px;align-items:start;}
+  .pkg-card{background:linear-gradient(180deg,rgba(34,28,22,.95),rgba(20,17,13,.96));border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:100%;}
+  .pkg-media{display:flex;align-items:center;justify-content:center;height:220px;padding:14px;background:#120f0c;border-bottom:1px solid var(--border);}
+  .pkg-media img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;object-position:center;display:block;}
+  .pkg-card-body{padding:18px 18px 8px;}
+  .pkg-head{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;padding-bottom:12px;border-bottom:1px solid var(--border);margin-bottom:2px;}
+  .pkg-head h2{margin:0;font-family:'Fraunces',serif;font-size:1.38rem;line-height:1.15;font-weight:500;color:var(--cream);}
+  .pkg-count{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
+  .pkg-desc{margin:10px 0 8px;color:var(--muted);font-size:.82rem;line-height:1.55;}
+  .pkg-item{padding:12px 0;border-bottom:1px solid rgba(196,154,69,.18);}
+  .pkg-item:last-child{border-bottom:none;}
+  .pkg-item-title{margin:0 0 3px;font-family:'Fraunces',serif;font-weight:500;font-size:1rem;line-height:1.35;color:var(--cream);}
+  .pkg-item-sub{margin:0 0 8px;font-size:.8rem;color:var(--muted);line-height:1.4;}
+  .pkg-callout{display:inline-flex;border-radius:999px;background:rgba(196,154,69,.14);color:var(--gold-light);border:1px solid rgba(196,154,69,.28);padding:6px 10px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;}
+  .bundle-stack{display:grid;gap:10px;margin-top:10px;}
+  .bundle-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 14px;border:1px solid rgba(196,154,69,.18);border-radius:16px;background:rgba(255,255,255,.02);}
+  .bundle-buy{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-light);}
+  .bundle-bonus{font-family:'Fraunces',serif;font-size:1rem;line-height:1.25;color:var(--cream);text-align:right;}
+  .bundle-bonus strong{color:var(--gold-light);font-weight:500;}
+  .pkg-options{display:flex;flex-direction:column;gap:8px;}
+  .pkg-opt{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
+  .pkg-opt-label{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:var(--cream);}
+  .pkg-opt-price{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
+  .pkg-badge{display:inline-flex;border-radius:999px;background:rgba(196,154,69,.14);color:var(--gold-light);border:1px solid rgba(196,154,69,.28);padding:3px 8px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;}
+  .pkg-reg{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--gold);}
+  .pkg-final{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-light);}
+  .pkg-plain-row{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+  .pkg-plain{font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:16px;color:var(--gold-light);}
+  .pkg-note{font-size:.78rem;color:var(--gold-light);font-style:italic;text-align:right;}
+  .pkg-footer{max-width:1200px;margin:0 auto;padding:8px 24px 70px;border-top:1px solid var(--border);}
+  .pkg-footer p{max-width:640px;margin:24px auto 0;text-align:center;font-size:.86rem;color:var(--muted);}
+  .pkg-footer a{display:inline-block;margin:18px auto 0;text-align:center;width:100%;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gold-light);}
+  .limited-overlay{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;visibility:hidden;transition:.2s ease;}
+  .limited-overlay.show{opacity:1;visibility:visible;}
+  .limited-modal{position:relative;width:min(520px,100%);border:1px solid rgba(196,154,69,.42);border-radius:28px;background:radial-gradient(circle at 80% 0%,rgba(196,154,69,.22),transparent 35%),linear-gradient(180deg,#211d18,#0f0d0b);box-shadow:0 32px 90px rgba(0,0,0,.65);padding:34px 30px;text-align:center;}
+  .limited-close{position:absolute;right:16px;top:14px;background:transparent;border:1px solid rgba(196,154,69,.35);color:var(--gold-light);border-radius:999px;width:32px;height:32px;cursor:pointer;font-size:18px;line-height:1;}
+  .limited-kicker{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;}
+  .limited-modal h2{font-family:'Fraunces',serif;font-size:clamp(2rem,6vw,3.1rem);line-height:1.06;margin:0 0 12px;color:var(--cream);}
+  .limited-modal p{color:var(--soft);line-height:1.65;margin:0 auto 22px;max-width:420px;}
+  .limited-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  @media(max-width:900px){
+    .pkg-hero-inner{padding:60px 20px 58px;}
+    .pkg-main{padding:24px 16px 74px;}
+    .pkg-grid{grid-template-columns:1fr;gap:16px;}
+    .pkg-media{height:210px;}
+  }
+  @media(max-width:640px){
+    .pkg-title{font-size:clamp(2.4rem,12vw,3.6rem);}
+    .pkg-sub{font-size:1rem;}
+    .pkg-media{height:190px;padding:12px;}
+    .pkg-opt{display:block;}
+    .pkg-opt-price{justify-content:flex-start;margin-top:6px;}
+    .pkg-head{align-items:flex-start;flex-direction:column;}
+    .limited-modal{padding:30px 20px;}
+    .bundle-row{display:block;padding:12px;}
+    .bundle-bonus{text-align:left;margin-top:6px;}
+  }
+
+/* August special offer running banner */
+:root{
+  --infuderm-banner-height:42px;
+  --infuderm-header-height:82px;
+}
+body{
+  padding-top:calc(var(--infuderm-banner-height) + var(--infuderm-header-height)) !important;
+}
+.top-bar.infuderm-running-banner{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100001 !important;
+  height:var(--infuderm-banner-height) !important;
+  overflow:hidden !important;
+  white-space:nowrap !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  border-bottom:1px solid rgba(240,217,144,.35) !important;
+  background:linear-gradient(90deg,#0d0f14,#1a1410,#0d0f14) !important;
+  color:#f0d990 !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  box-shadow:0 6px 22px rgba(0,0,0,.22) !important;
+}
+.infuderm-running-track{
+  display:inline-flex !important;
+  align-items:center !important;
+  min-width:max-content !important;
+  animation:infudermMarquee 22s linear infinite !important;
+}
+.infuderm-running-track span{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:0 36px !important;
+  font-size:.92rem !important;
+}
+.infuderm-running-track span::after{
+  content:"◆";
+  color:#d4af5a;
+  margin-left:36px;
+  font-size:.7rem;
+}
+@keyframes infudermMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+body > header{
+  position:fixed !important;
+  top:var(--infuderm-banner-height) !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100000 !important;
+  min-height:var(--infuderm-header-height) !important;
+  background:rgba(8,9,12,.94) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(212,175,90,.22);
+}
+body > header .nav{
+  min-height:var(--infuderm-header-height) !important;
+  align-items:center !important;
+}
+@media(max-width:640px){
+  :root{
+    --infuderm-banner-height:38px;
+    --infuderm-header-height:76px;
+  }
+  .infuderm-running-track span{
+    font-size:.78rem !important;
+    padding:0 24px !important;
+  }
+  .infuderm-running-track span::after{margin-left:24px;}
+}
+
+
+/* INFUDERM footer - site-wide */
+.infuderm-footer{
+  position:relative;
+  overflow:hidden;
+  background: linear-gradient(90deg, #070604 0%, #06080d 33%, #0b0906 62%, #171108 100%);
+  border-top: 1px solid rgba(194,150,62,.18);
+  color:#efe8db;
+  padding: 38px 0 14px;
+}
+.infuderm-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(205,161,70,.17) 0%, rgba(205,161,70,0) 30%),
+    linear-gradient(90deg, rgba(205,161,70,.03) 0%, rgba(205,161,70,0) 28%, rgba(205,161,70,.05) 76%, rgba(205,161,70,.1) 100%);
+  pointer-events:none;
+}
+.infuderm-footer-inner{
+  position:relative;
+  z-index:1;
+  width:min(1280px, calc(100% - 88px));
+  margin:0 auto;
+}
+.infuderm-footer-grid{
+  display:grid;
+  grid-template-columns: 300px 210px 235px 160px 190px;
+  column-gap:44px;
+  row-gap:32px;
+  align-items:flex-start;
+  justify-content:flex-start;
+}
+.infuderm-footer-brand,.infuderm-footer-col{text-align:left;justify-self:start;align-self:start;}
+.infuderm-footer-brand img{
+  width:150px;
+  height:100px;
+  object-fit:cover;
+  object-position:center center;
+  display:block;
+  margin:0 0 20px 0;
+}
+.infuderm-footer-brand p{
+  max-width:290px;
+  margin:0 0 18px;
+  color:rgba(245,239,228,.95);
+  font-size:16px;
+  line-height:1.48;
+}
+.infuderm-footer-contact{display:grid;gap:11px;margin:0 0 24px;justify-items:start;align-items:start;text-align:left;}
+.infuderm-footer-contact-row{display:flex;align-items:center;justify-content:flex-start;gap:13px;color:#efe8db;font-size:16px;line-height:1.35;text-align:left;}
+.infuderm-footer-contact-row a{color:#efe8db;}
+.infuderm-footer-contact-row svg{width:16px;height:16px;flex:0 0 16px;stroke:#d4ad58;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.infuderm-footer-follow{margin:0 0 14px;color:#f0c96b;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:800;text-align:left;}
+.infuderm-footer-social{display:flex;gap:10px;justify-content:flex-start;}
+.infuderm-footer-social a{width:37px;height:37px;border-radius:50%;border:1px solid rgba(202,159,69,.75);display:inline-flex;align-items:center;justify-content:center;color:#efe8db;background:rgba(255,255,255,.01);}
+.infuderm-footer-social a svg{width:16px;height:16px;fill:currentColor;}
+.infuderm-footer-social a:hover,.infuderm-footer-col a:hover,.infuderm-footer-contact-row a:hover{color:#f0c96b;}
+.infuderm-footer-col h3{margin:8px 0 24px;color:#f0c96b;text-transform:uppercase;letter-spacing:.12em;font-size:14px;font-weight:800;text-align:left;}
+.infuderm-footer-col ul{list-style:none;margin:0;padding:0;display:grid;gap:13px;justify-items:start;text-align:left;}
+.infuderm-footer-col li{text-align:left;width:100%;}
+.infuderm-footer-col a{color:#efe8db;font-size:16px;line-height:1.2;text-align:left;}
+.infuderm-footer-link-arrow{display:flex;align-items:center;justify-content:flex-start;gap:16px;width:100%;}
+.infuderm-footer-link-arrow .arrow{color:#d4ad58;font-size:17px;line-height:1;margin-left:auto;}
+.infuderm-footer-link-strong a{color:#f0c96b;font-weight:700;}
+.infuderm-footer-bottom{margin-top:32px;padding:18px 16px 0;border-top:1px solid rgba(194,150,62,.2);display:flex;justify-content:space-between;align-items:center;gap:20px;color:rgba(245,239,228,.9);font-size:15px;}
+.infuderm-footer-bottom-right{font-weight:500;}
+@media (max-width:1220px){.infuderm-footer-grid{grid-template-columns:1.15fr 1fr 1fr;}}
+@media (max-width:860px){.infuderm-footer-inner{width:min(100% - 36px, 1280px);}.infuderm-footer-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:640px){.infuderm-footer{padding:34px 0 14px;}.infuderm-footer-grid{grid-template-columns:1fr;gap:28px;}.infuderm-footer-brand p{font-size:16px;}.infuderm-footer-col a,.infuderm-footer-contact-row{font-size:15px;}.infuderm-footer-bottom{flex-direction:column;align-items:flex-start;padding-left:0;padding-right:0;}}
+
+
+/* Site-wide running banner */
+:root{
+  --infuderm-banner-height:42px;
+  --infuderm-header-height:82px;
+}
+body{
+  padding-top:calc(var(--infuderm-banner-height) + var(--infuderm-header-height)) !important;
+}
+.top-bar.infuderm-running-banner{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100001 !important;
+  height:var(--infuderm-banner-height) !important;
+  overflow:hidden !important;
+  white-space:nowrap !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  border-bottom:1px solid rgba(240,217,144,.35) !important;
+  background:linear-gradient(90deg,#0d0f14,#1a1410,#0d0f14) !important;
+  color:#f0d990 !important;
+  font-weight:900 !important;
+  letter-spacing:.08em !important;
+  text-transform:uppercase !important;
+  box-shadow:0 6px 22px rgba(0,0,0,.22) !important;
+}
+.infuderm-running-track{
+  display:inline-flex !important;
+  align-items:center !important;
+  min-width:max-content !important;
+  animation:infudermMarquee 22s linear infinite !important;
+}
+.infuderm-running-track span{
+  display:inline-flex !important;
+  align-items:center !important;
+  padding:0 36px !important;
+  font-size:.92rem !important;
+}
+.infuderm-running-track span::after{
+  content:"◆";
+  color:#d4af5a;
+  margin-left:36px;
+  font-size:.7rem;
+}
+@keyframes infudermMarquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+body > header{
+  position:fixed !important;
+  top:var(--infuderm-banner-height) !important;
+  left:0 !important;
+  right:0 !important;
+  z-index:100000 !important;
+  min-height:var(--infuderm-header-height) !important;
+  background:rgba(8,9,12,.94) !important;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(212,175,90,.22);
+}
+body > header .nav{
+  min-height:var(--infuderm-header-height) !important;
+  align-items:center !important;
+}
+@media(max-width:640px){
+  :root{
+    --infuderm-banner-height:38px;
+    --infuderm-header-height:76px;
+  }
+  .infuderm-running-track span{
+    font-size:.78rem !important;
+    padding:0 24px !important;
+  }
+  .infuderm-running-track span::after{margin-left:24px;}
+}
+
+</style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1544750100428362');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1544750100428362&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+<body class="pkg-page">
+<div class="top-bar infuderm-running-banner" aria-label="August special offer">
+  <div class="infuderm-running-track">
+    <span>SPECIAL OFFER FROM AUGUST 16-31 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 16-31 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 16-31 ONLY</span>
+    <span>SPECIAL OFFER FROM AUGUST 16-31 ONLY</span>
+  </div>
+</div>
+
+<header><nav class="nav">
+  <a href="../"><img class="logo" src="../images/logo.png" alt="INFUDERM Logo"></a>
+  <div class="nav-links">
+    <a href="../about/">About</a>
+    <a href="../services/">Price &amp; Treatment</a>
+    <a href="./" class="active" aria-current="page">Packages</a>
+    <a href="../team/">Meet Our Team</a>
+    <a href="../contact/">Contact Us</a>
+  </div>
+  <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Free Consultation</a>
+</nav></header>
+
+<section class="pkg-hero">
+  <div class="pkg-hero-inner">
+    <div class="pkg-eyebrow">INFUDERM Clinic Packages</div>
+    <h1 class="pkg-title">Packages</h1>
+    <p class="pkg-sub">Bundle select treatments with current promotional pricing and package savings designed for patients planning multiple sessions.</p>
+    <div class="pkg-actions">
+      <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Free Consultation</a>
+      <a class="btn outline" href="../services/">View Price &amp; Treatment</a>
+    </div>
+  </div>
+</section>
+
+<main class="pkg-main">
+  <div class="pkg-grid" id="pkgGrid"></div>
+</main>
+<div class="limited-overlay" id="limitedOffer" role="dialog" aria-modal="true" aria-label="Limited time offer">
+  <div class="limited-modal">
+    <button class="limited-close" type="button" aria-label="Close offer">×</button>
+    <div class="limited-kicker">Limited Time Offer</div>
+    <h2>Package Savings Available</h2>
+    <p>Save on select INFUDERM treatment packages for a limited time. Final pricing and eligibility are confirmed during consultation.</p>
+    <div class="limited-actions">
+      <a class="btn" href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Free Consultation</a>
+      <button class="btn outline limited-close-secondary" type="button">View Packages</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const CHAPTERS = [
+  {
+    "id": "ezgel",
+    "name": "EZ Gel PRF Package",
+    "img": "prp-prf-hero.jpg",
+    "desc": "Package pricing for EZ GEL treatment areas.",
+    "type": "options",
+    "items": [
+      {
+        "title": "PRF / EZ Gel — Chin Shadow",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,100",
+            "promo": "30% off",
+            "final": "$1,470"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$4,200",
+            "promo": "30% off",
+            "final": "$2,940"
+          }
+        ]
+      },
+      {
+        "title": "PRF / EZ Gel — Nasolabial Folds",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,250",
+            "promo": "30% off",
+            "final": "$1,575"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$4,500",
+            "promo": "30% off",
+            "final": "$3,150"
+          }
+        ]
+      },
+      {
+        "title": "PRF / EZ Gel — Under Eye",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,400",
+            "promo": "30% off",
+            "final": "$1,680"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$4,800",
+            "promo": "30% off",
+            "final": "$3,360"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "prp",
+    "name": "PRP Packages",
+    "img": "about-page-photo.png",
+    "desc": "PRP package options for hair restoration and under-eye treatment.",
+    "type": "options",
+    "items": [
+      {
+        "title": "PRP Manual Injection — Hair Restoration",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,700",
+            "promo": "30% off",
+            "final": "$1,890"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$5,400",
+            "promo": "30% off",
+            "final": "$3,780"
+          }
+        ]
+      },
+      {
+        "title": "PRP Under-Eye Filler",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$1,497",
+            "promo": "20% off",
+            "final": "$1,197.60"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$2,994",
+            "promo": "20% off",
+            "final": "$2,395.20"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "morpheus8",
+    "name": "Morpheus 8 Packages",
+    "img": "morpheus8-hero.jpg",
+    "desc": "RF microneedling package options for face, jawline, and neck areas.",
+    "type": "options",
+    "items": [
+      {
+        "title": "Morpheus8 — Jawline and Neck",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,400",
+            "promo": "30% off",
+            "final": "$1,680"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$4,800",
+            "promo": "30% off",
+            "final": "$3,360"
+          }
+        ]
+      },
+      {
+        "title": "Morpheus8 — Full Face and Neck",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,400",
+            "promo": "30% off",
+            "final": "$1,680"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$4,800",
+            "promo": "30% off",
+            "final": "$3,360"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hydrafacial",
+    "name": "HydraFacial Packages",
+    "img": "hydrafacial-hero.jpg",
+    "desc": "Bundle offers available across all HydraFacial services.",
+    "type": "bundle",
+    "countLabel": "03 offers",
+    "items": [
+      {
+        "title": "All HydraFacial Services",
+        "sub": "Choose the package that fits your treatment plan.",
+        "offers": [
+          {"buy": "Buy 3 Sessions", "bonus": "Receive <strong>1 Free</strong>"},
+          {"buy": "Buy 6 Sessions", "bonus": "Receive <strong>2 Free</strong>"},
+          {"buy": "Buy 9 Sessions", "bonus": "Receive <strong>3 Free</strong>"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "iv",
+    "name": "IV Packages",
+    "img": "iv-therapy-hero.jpg",
+    "desc": "Bundle offers available across all IV wellness services.",
+    "type": "bundle",
+    "countLabel": "03 offers",
+    "items": [
+      {
+        "title": "All IV Wellness Services",
+        "sub": "Choose the package that fits your wellness plan.",
+        "offers": [
+          {"buy": "Buy 3 Sessions", "bonus": "Receive <strong>1 Free</strong>"},
+          {"buy": "Buy 6 Sessions", "bonus": "Receive <strong>2 Free</strong>"},
+          {"buy": "Buy 9 Sessions", "bonus": "Receive <strong>3 Free</strong>"}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "laser",
+    "name": "Laser Hair Removal Packages",
+    "img": "laser-hero.jpg",
+    "desc": "Each treatment area, with every package size grouped together.",
+    "type": "options",
+    "items": [
+      {
+        "title": "Small Area",
+        "options": [
+          {
+            "label": "6 sessions",
+            "regular": "$600",
+            "promo": "30% off",
+            "final": "$420"
+          },
+          {
+            "label": "12 sessions",
+            "regular": "$1,200",
+            "promo": "30% off",
+            "final": "$840"
+          }
+        ]
+      },
+      {
+        "title": "Medium Area",
+        "options": [
+          {
+            "label": "6 sessions",
+            "regular": "$900",
+            "promo": "30% off",
+            "final": "$630"
+          },
+          {
+            "label": "12 sessions",
+            "regular": "$1,800",
+            "promo": "30% off",
+            "final": "$1,260"
+          }
+        ]
+      },
+      {
+        "title": "Large Area",
+        "options": [
+          {
+            "label": "6 sessions",
+            "regular": "$1,500",
+            "promo": "30% off",
+            "final": "$1,050"
+          },
+          {
+            "label": "12 sessions",
+            "regular": "$3,000",
+            "promo": "30% off",
+            "final": "$2,100"
+          }
+        ]
+      },
+      {
+        "title": "Full Body",
+        "options": [
+          {
+            "label": "6 sessions",
+            "regular": "$3,600",
+            "promo": "30% off",
+            "final": "$2,520"
+          },
+          {
+            "label": "12 sessions",
+            "regular": "$7,200",
+            "promo": "30% off",
+            "final": "$5,040"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "microneedling",
+    "name": "Microneedling Packages",
+    "img": "microneedling-hero.jpg",
+    "desc": "Package options for SkinPen microneedling services.",
+    "type": "options",
+    "items": [
+      {
+        "title": "SkinPen Microneedling — Full Face",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$900",
+            "promo": "30% off",
+            "final": "$630"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$1,800",
+            "promo": "30% off",
+            "final": "$1,260"
+          }
+        ]
+      },
+      {
+        "title": "Microneedling — Full Face with PRP",
+        "options": [
+          {
+            "label": "3 sessions",
+            "regular": "$2,100",
+            "promo": "30% off",
+            "final": "$1,470"
+          },
+          {
+            "label": "6 sessions",
+            "regular": "$4,200",
+            "promo": "30% off",
+            "final": "$2,940"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "addons",
+    "name": "Add-Ons",
+    "img": "reston-2.jpg",
+    "desc": "Small enhancements that can be paired with select treatments or visits.",
+    "type": "addon",
+    "items": [
+      {
+        "title": "Dermaplaning — Golden Hour Facial Add-On",
+        "sub": "Add-on",
+        "price": "$30",
+        "note": "Standard add-on price"
+      },
+      {
+        "title": "Red Light Therapy — IV Drip Add-On",
+        "sub": "Add-on",
+        "price": "$30",
+        "note": "Standard add-on price"
+      },
+      {
+        "title": "Red Light Therapy — HydraFacial Signature Package",
+        "sub": "Add-on",
+        "price": "$0",
+        "note": "Complimentary"
+      }
+    ]
+  }
+];
+
+function itemHTML(ch, it){
+  if(ch.type === 'addon'){
+    return `
+      <div class="pkg-item">
+        <p class="pkg-item-title">${it.title}</p>
+        <p class="pkg-item-sub">${it.sub}</p>
+        <div class="pkg-plain-row">
+          <span class="pkg-plain">${it.price}</span>
+          <span class="pkg-note">${it.note}</span>
+        </div>
+      </div>`;
+  }
+  if(ch.type === 'bundle'){
+    const offers = (it.offers || []).map(o => `
+      <div class="bundle-row">
+        <span class="bundle-buy">${o.buy}</span>
+        <span class="bundle-bonus">${o.bonus}</span>
+      </div>`).join('');
+    return `
+      <div class="pkg-item">
+        <p class="pkg-item-title">${it.title}</p>
+        ${it.sub ? `<p class="pkg-item-sub">${it.sub}</p>` : ''}
+        <div class="bundle-stack">${offers}</div>
+      </div>`;
+  }
+  const opts = it.options.map(o => `
+    <div class="pkg-opt">
+      <span class="pkg-opt-label">${o.label}</span>
+      <div class="pkg-opt-price">
+        <span class="pkg-badge">${o.promo}</span>
+        <span class="pkg-reg">${o.regular}</span>
+        <span class="pkg-final">${o.final}</span>
+      </div>
+    </div>`).join('');
+  return `
+    <div class="pkg-item">
+      <p class="pkg-item-title">${it.title}</p>
+      <div class="pkg-options">${opts}</div>
+    </div>`;
+}
+
+const grid = document.getElementById('pkgGrid');
+grid.innerHTML = CHAPTERS.map(ch => `
+  <article class="pkg-card" data-cat="${ch.id}">
+    <div class="pkg-media"><img src="../images/${ch.img}" alt="${ch.name} at INFUDERM Clinic" loading="lazy"></div>
+    <div class="pkg-card-body">
+      <div class="pkg-head">
+        <h2>${ch.name}</h2>
+        <span class="pkg-count">${ch.countLabel || `${String(ch.items.length).padStart(2,'0')} item${ch.items.length>1?'s':''}`}</span>
+      </div>
+      ${ch.desc ? `<p class="pkg-desc">${ch.desc}</p>` : ''}
+      ${ch.items.map(it => itemHTML(ch, it)).join('')}
+    </div>
+  </article>`).join('');
+
+const overlay = document.getElementById('limitedOffer');
+const closeButtons = overlay.querySelectorAll('.limited-close, .limited-close-secondary');
+window.addEventListener('load', () => {
+  setTimeout(() => overlay.classList.add('show'), 650);
+});
+closeButtons.forEach(btn => btn.addEventListener('click', () => overlay.classList.remove('show')));
+overlay.addEventListener('click', (event) => {
+  if(event.target === overlay) overlay.classList.remove('show');
+});
+document.addEventListener('keydown', (event) => {
+  if(event.key === 'Escape') overlay.classList.remove('show');
+});
+</script>
+
+<footer class="infuderm-footer">
+  <div class="infuderm-footer-inner">
+    <div class="infuderm-footer-grid">
+      <div class="infuderm-footer-brand">
+        <img src="../images/logo.png" alt="INFUDERM Clinic Logo">
+        <p>Personalized medical aesthetics, wellness, and skincare treatments designed to help you look and feel your best.</p>
+        <div class="infuderm-footer-contact">
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><span>Reston</span></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg><span>Aldie</span></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.91.35 1.8.68 2.66a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.42-1.25a2 2 0 0 1 2.11-.45c.86.33 1.75.56 2.66.68A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:+15713759180">(571) 375-9180</a></div>
+          <div class="infuderm-footer-contact-row"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z"></path><path d="m4 7 8 6 8-6"></path></svg><a href="mailto:Info@InfudermVA.com">Info@InfudermVA.com</a></div>
+        </div>
+        <div class="infuderm-footer-follow">FOLLOW US</div>
+        <div class="infuderm-footer-social" aria-label="INFUDERM social media links">
+          <a href="https://www.instagram.com/infudermclinic/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7Zm11.2 1.55a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2.1a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z"/></svg></a>
+          <a href="https://www.facebook.com/infudermclinic" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.75l.41-3.2H13.5V8.57c0-.93.26-1.56 1.59-1.56h1.7V4.15c-.3-.04-1.31-.13-2.49-.13-2.47 0-4.16 1.5-4.16 4.26v2.38H7.35v3.2h2.79V22h3.36Z"/></svg></a>
+          <a href="https://www.linkedin.com/company/infuderm-aesthetic-clinic" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5A1.94 1.94 0 1 1 7 4.62 1.94 1.94 0 0 1 6.94 8.5ZM5.4 9.9H8.5V20H5.4V9.9Zm5.03 0h2.98v1.38h.04c.42-.79 1.43-1.63 2.94-1.63 3.15 0 3.73 2.07 3.73 4.75V20h-3.1v-4.94c0-1.18-.02-2.7-1.64-2.7-1.65 0-1.9 1.28-1.9 2.61V20h-3.05V9.9Z"/></svg></a>
+          <a href="https://www.tiktok.com/@infudermclinic" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.96 3c.27 2.18 1.5 3.84 3.65 4.28v2.31a6.33 6.33 0 0 1-3.43-1.06v6.6c0 3.29-2.48 5.62-5.69 5.62A5.5 5.5 0 0 1 4 15.25c0-3.16 2.61-5.63 5.98-5.39v2.36c-1.9-.26-3.53 1-3.53 2.94 0 1.75 1.3 3.05 3.02 3.05 1.63 0 2.76-1.06 2.76-3.3V3h2.73Z"/></svg></a>
+        </div>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>TREATMENTS</h3>
+        <ul>
+          <li><a class="infuderm-footer-link-arrow" href="../services/hydrafacial/"><span>HydraFacial</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/dermaplaning-facial/"><span>Dermaplaning Facial</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/microneedling-northern-virginia/"><span>Microneedling</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/morpheus8/"><span>Morpheus8</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/prp-prf/"><span>PRP/PRF Therapy</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/iv-therapy-wellness-injections-northern-virginia/"><span>IV Therapy</span><span class="arrow">›</span></a></li>
+          <li><a class="infuderm-footer-link-arrow" href="../services/medical-weight-loss-glp-1-injections-northern-virginia/"><span>Medical Weight Loss</span><span class="arrow">›</span></a></li>
+          <li class="infuderm-footer-link-strong"><a class="infuderm-footer-link-arrow" href="../services/"><span>View All Services</span><span class="arrow">›</span></a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>PATIENT RESOURCES</h3>
+        <ul>
+          <li><a href="https://infudermva.com/links/" target="_blank" rel="noopener">Book Consultation</a></li>
+          <li><a href="https://www.myaestheticspro.com/portal/index.cfm?25461261CFB4C61629932C2D2C1E1EC0FBC66F7FCA968DDF12B85466368C5E81" target="_blank" rel="noopener">Patient Portal</a></li>
+          <li><a href="../patient-resources/">FAQ</a></li>
+          <li><a href="../appointment-cancellation-policy/">Appointment &amp; Cancellation Policy</a></li>
+          <li><a href="../contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>ABOUT</h3>
+        <ul>
+          <li><a href="../about/">About INFUDERM</a></li>
+          <li><a href="../team/">Meet Our Team</a></li>
+        </ul>
+      </div>
+      <div class="infuderm-footer-col">
+        <h3>LEGAL</h3>
+        <ul>
+          <li><a href="../privacy-policy/">Privacy Policy</a></li>
+          <li><a href="../terms-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="../cookie-policy/">Cookie Policy</a></li>
+          <li><a href="../website-disclaimer/">Website Disclaimer</a></li>
+          <li><a href="../hipaa/">HIPAA</a></li>
+          <li><a href="../accessibility-statement/">Accessibility Statement</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="infuderm-footer-bottom">
+      <span>© 2026 INFUDERM Clinic. All rights reserved.</span>
+      <span class="infuderm-footer-bottom-right">Medical Precision. Absolute Safety.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
